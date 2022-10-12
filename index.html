@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Frontend Mentor | Product preview card component</title>
+    </head>
+    <body>
+        <div class="container">
+            <picture class="imageBlock">
+                <source
+                    media="(max-width: 375px)"
+                    srcset="./images/image-product-mobile.jpg"
+                    class="image"
+                />
+                <img
+                    src="images/image-product-desktop.jpg"
+                    alt="image-desktop"
+                    class="image"
+                />
+            </picture>
+            <div class="textBlock">
+                <p class="category">perfume</p>
+                <h1 class="title">Gabrielle Essence Eau De Parfum</h1>
+                <p class="info">
+                    A floral, solar and voluptuous interpretation composed by
+                    Olivier Polge, Perfumer-Creator for the House of CHANEL.
+                </p>
+                <div class="price">
+                    <h1 class="price-off">$149.99</h1>
+                    <span class="price-prev">$169.99</span>
+                </div>
+                <button class="addButton">
+                    <img
+                        src="./images/icon-cart.svg"
+                        alt="cart-icon"
+                        class="cartIcon"
+                    />Add to Cart
+                </button>
+            </div>
+        </div>
+        <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="https://github.com/Jim876633">Jim Huang</a>.
+        </div>
+    </body>
+</html>

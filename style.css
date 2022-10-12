@@ -1,0 +1,126 @@
+:root {
+    --color-primary: hsl(30, 38%, 92%);
+    --color-cyan: hsl(158, 36%, 37%);
+    --color-cyan-dark: hsl(158, 36%, 20%);
+    --color-grayish-blue: hsl(228, 12%, 48%);
+    --color-dark-blue: hsl(212, 21%, 14%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-link: hsl(228, 45%, 44%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: var(--color-primary);
+    font-family: "Montserrat", sans-serif;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px 15px;
+    overflow: hidden;
+}
+.container {
+    background: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.image {
+    width: 100%;
+}
+.textBlock {
+    padding: 20px;
+    color: var(--color-grayish-blue);
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.category {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.title {
+    color: var(--color-dark-blue);
+    font-family: "Fraunces", serif;
+}
+.info {
+    font-size: 14px;
+    line-height: 1.5;
+}
+.price {
+    display: flex;
+    align-items: center;
+}
+.price-off {
+    font-family: "Fraunces", serif;
+    color: var(--color-cyan);
+}
+.price-prev {
+    font-size: 14px;
+    margin-left: 20px;
+    text-decoration: line-through;
+}
+.addButton {
+    color: var(--color-white);
+    background: var(--color-cyan);
+    border: none;
+    padding: 15px 0;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.addButton:hover,
+.addButton:focus {
+    background: var(--color-cyan-dark);
+}
+.cartIcon {
+    margin-right: 10px;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: var(--color-link);
+}
+@media (min-width: 376px) {
+    body {
+        padding: 0;
+    }
+    .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        flex-direction: row;
+        width: 45%;
+        height: 70%;
+    }
+    .imageBlock {
+        width: 50%;
+    }
+    .image {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    .textBlock {
+        width: 50%;
+        padding: 30px;
+    }
+    .attribution {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
