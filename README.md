@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Add solution URL here]
--   Live Site URL: [Add live site URL here]
+-   Solution URL: [product-preview-card-component](https://github.com/Jim876633/frontend-mentor-solution/tree/product-preview-card-component)
+-   Live Site URL: [live site](https://jim-product-preview-card-component.netlify.app/)
 
 ## My process
 
@@ -43,7 +43,7 @@ Users should be able to:
 
 ### What I learned
 
-use <picture> and <sourece> element to change image from diffent device.
+use `<picture>` and `<sourece>` element to change image from diffent device.
 
 ```html
 <picture class="imageBlock">
