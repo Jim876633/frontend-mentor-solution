@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [product-preview-card-component](https://github.com/Jim876633/frontend-mentor-solution/tree/product-preview-card-component)
+-   Solution URL: [fontend mentor solution](https://www.frontendmentor.io/solutions/responsive-landing-width-cssflex-and-htmlsourceelement-wzmIeC5Nhr)
 -   Live Site URL: [live site](https://jim-product-preview-card-component.netlify.app/)
 
 ## My process
