@@ -11,6 +11,7 @@ Switch to the diffent branch and the branch name is the challenge title.
 | challenge | branch | live site |
 |  ----  | ----  | ---- |
 | Product preview card component | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/product-preview-card-component) | [Demo](https://jim-product-preview-card-component.netlify.app/) |
-| interactive rating component | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/interactive-rating-component) | [Demo](https://jim-interative-rating-component.netlify.app/) |
+| Interactive rating component | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/interactive-rating-component) | [Demo](https://jim-interative-rating-component.netlify.app/) |
+| Url shortening api master | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/url-shortening-api-master) | [Demo](https://jim-url-shortening-api-master.netlify.app/) |
 
 
