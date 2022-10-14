@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./scss/style.css" />
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+        </style>
+    </head>
+    <body>
+        <!--header -->
+        <header class="header">
+            <div class="header__logo">
+                <a href="#"><img src="/images/logo.svg" alt="logo" /></a>
+            </div>
+            <nav class="nav">
+                <ul class="nav__links">
+                    <li><a href="#" class="link">Features</a></li>
+                    <li><a href="#" class="link">Pricing</a></li>
+                    <li><a href="#" class="link">Resources</a></li>
+                </ul>
+                <button class="nav__login">Login</button>
+                <button class="nav__signup">Sign Up</button>
+            </nav>
+            <button class="toggle">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+            </button>
+        </header>
+        <main>
+            <!--banner section-->
+            <section class="banner">
+                <div class="banner__illustration">
+                    <img
+                        src="/images/illustration-working.svg"
+                        alt="illustration"
+                    />
+                </div>
+                <div class="banner__info">
+                    <h1 class="banner__info--title">
+                        More than just shorter links
+                    </h1>
+                    <h3 class="banner__info--intro">
+                        Build your brand’s recognition and get detailed insights
+                        on how your links are performing.
+                    </h3>
+                    <button class="banner__info--start">Get Started</button>
+                </div>
+            </section>
+            <!--search section-->
+            <section class="search">
+                <form class="search__form">
+                    <div class="search__form--input">
+                        <input
+                            type="text"
+                            placeholder="Shorten a link here...
+"
+                        />
+                        <span> Please add a valid link</span>
+                    </div>
+                    <button class="search__form--submit" type="submit">
+                        Shorten It!
+                    </button>
+                </form>
+                <!-- <div class="search__result">
+                    <div class="search__result--prev">http://</div>
+                    <a href="http://" class="search__result--sorten">http://</a>
+                    <button class="search__result--copy">Copy</button>
+                </div>
+                <div class="search__result">
+                    <div class="search__result--prev">http://</div>
+                    <a href="http://" class="search__result--sorten">http://</a>
+                    <button class="search__result--copy">Copy</button>
+                </div> -->
+            </section>
+            <!--advanced section-->
+            <section class="advanced">
+                <h1 class="advanced__title">Advanced Statistics</h1>
+                <p class="advanced__intro">
+                    Track how your links are performing across the web with our
+                    advanced statistics dashboard.
+                </p>
+                <div class="advanced__card advanced__card--one">
+                    <div class="advanced__card--icon">
+                        <img
+                            src="/images/icon-brand-recognition.svg"
+                            alt="brand"
+                            class="image"
+                        />
+                    </div>
+                    <h2 class="advanced__card--title">Brand Recognition</h2>
+                    <p class="advanced__card--info">
+                        Boost your brand recognition with each click. Generic
+                        links don’t mean a thing. Branded links help instil
+                        confidence in your content.
+                    </p>
+                </div>
+                <div class="advanced__card advanced__card--two">
+                    <div class="advanced__card--icon">
+                        <img
+                            src="/images/icon-detailed-records.svg"
+                            alt="detailed"
+                            class="image"
+                        />
+                    </div>
+                    <h2 class="advanced__card--title">Detailed Records</h2>
+                    <p class="advanced__card--info">
+                        Gain insights into who is clicking your links. Knowing
+                        when and where people engage with your content helps
+                        inform better decisions.
+                    </p>
+                </div>
+                <div class="advanced__card advanced__card--three">
+                    <div class="advanced__card--icon">
+                        <img
+                            src="/images/icon-fully-customizable.svg"
+                            alt="customizable"
+                            class="image"
+                        />
+                    </div>
+                    <h2 class="advanced__card--title">Fully Customizable</h2>
+                    <p class="advanced__card--info">
+                        Improve brand awareness and content discoverability
+                        through customizable links, supercharging audience
+                        engagement.
+                    </p>
+                </div>
+            </section>
+            <!--boots section-->
+            <section class="boots">
+                <div class="boots__title">Boost your links today</div>
+                <button class="boots__start">Get Started</button>
+            </section>
+        </main>
+        <!--footer-->
+        <footer class="footer">
+            <div class="footer__logo">
+                <img
+                    src="/images/logo-dark-background.svg"
+                    alt="logo"
+                    class="image"
+                />
+            </div>
+            <ul class="footer__category">
+                <li class="footer__category--title">Features</li>
+                <li>
+                    <a href="#" class="footer__category--link">
+                        Link Shortening</a
+                    >
+                </li>
+                <li>
+                    <a href="#" class="footer__category--link">
+                        Branded Links</a
+                    >
+                </li>
+                <li>
+                    <a href="#" class="footer__category--link"> Analytics</a>
+                </li>
+            </ul>
+            <ul class="footer__category">
+                <li class="footer__category--title">Resources</li>
+                <li><a href="#" class="footer__category--link"> Blog</a></li>
+                <li>
+                    <a href="#" class="footer__category--link"> Developers</a>
+                </li>
+                <li><a href="#" class="footer__category--link"> Support</a></li>
+            </ul>
+            <ul class="footer__category">
+                <li class="footer__category--title">Company</li>
+                <li><a href="#" class="footer__category--link"> About</a></li>
+                <li>
+                    <a href="#" class="footer__category--link"> Our Team</a>
+                </li>
+                <li><a href="#" class="footer__category--link"> Careers</a></li>
+                <li><a href="#" class="footer__category--link"> Contact</a></li>
+            </ul>
+            <ul class="footer__media">
+                <li>
+                    <a href="#" class="footer__media--link"
+                        ><img
+                            src="/images/icon-facebook.svg"
+                            alt="facebook"
+                            class="image"
+                    /></a>
+                </li>
+                <li>
+                    <a href="#" class="footer__media--link"
+                        ><img
+                            src="/images/icon-twitter.svg"
+                            alt="twitter"
+                            class="image"
+                    /></a>
+                </li>
+                <li>
+                    <a href="#" class="footer__media--link"
+                        ><img
+                            src="/images/icon-pinterest.svg"
+                            alt="pinterest"
+                            class="image"
+                    /></a>
+                </li>
+                <li>
+                    <a href="#" class="footer__media--link"
+                        ><img
+                            src="/images/icon-instagram.svg"
+                            alt="instagram"
+                            class="image"
+                    /></a>
+                </li>
+            </ul>
+            <!--attribution-->
+            <div class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    >Frontend Mentor</a
+                >. Coded by <a href="#">Jim Huang</a>.
+            </div>
+        </footer>
+        <script src="app.js"></script>
+    </body>
+</html>

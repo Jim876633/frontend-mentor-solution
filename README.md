@@ -30,15 +30,12 @@ Users should be able to:
 ### Screenshot
 
 ![](./screenshot/desktop.jpeg)
-![](./screenshot/phone-1.jpeg)
-![](./screenshot/phone-2.jpeg)
-![](./screenshot/phone-3.jpeg)
-![](./screenshot/phone-nav.jpeg)
+![](./screenshot/phone.jpeg)
 
 ### Links
 
--   Solution URL: [fontend mentor solution]()
--   Live Site URL: [live site]()
+-   Solution URL: [fontend mentor solution](https://www.frontendmentor.io/solutions/use-scss-and-bem-for-css-use-localstorage-to-save-the-generator-url-41iVVLWQF8)
+-   Live Site URL: [live site](https://jim-url-shortening-api-master.netlify.app/)
 
 ## My process
 
@@ -52,7 +49,7 @@ Users should be able to:
 
 ### What I learned
 
-Use scss `@mixin` to RWD.
+Use SCSS `@mixin` to RWD.
 
 ```scss
 @mixin respond($media) {
