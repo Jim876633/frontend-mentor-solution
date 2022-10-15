@@ -72,7 +72,7 @@ const fetchLocation = async (ip) => {
     `;
     const res = await fetch(ipAPI_URL);
     const data = await res.json();
-    if (data.code == 422) {
+    if (data.code == 422 || data.code === 400) {
         inValidAlert();
         return;
     }
