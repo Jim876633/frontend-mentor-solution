@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | IP Address Tracker</title>
+        <!--google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!--leaf map-->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+            integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+            crossorigin=""
+        />
+        <script
+            src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+            integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+            crossorigin=""
+        ></script>
+
+        <link rel="stylesheet" href="/scss/style.css" />
+    </head>
+    <body>
+        <header class="search">
+            <div class="search__title">IP Address Tracker</div>
+            <!--Form-->
+            <form class="search__form">
+                <input
+                    type="text"
+                    class="search__form--input"
+                    placeholder=" Search for any IP address or domain"
+                />
+                <button type="submit" class="search__form--submit">
+                    <img
+                        src="/images/icon-arrow.svg"
+                        alt="arrow"
+                        class="image"
+                    />
+                </button>
+            </form>
+            <!--Result
+            -->
+            <div class="search__result">
+                <div class="search__result--ip">
+                    <span class="name"> IP Address </span>
+                    <span class="result">Address...</span>
+                </div>
+                <div class="search__result--location">
+                    <span class="name"> Location </span>
+                    <span class="result">Location...</span>
+                </div>
+                <div class="search__result--timezone">
+                    <span class="name"> Timezone </span>
+                    <span class="result">Timezone...</span>
+                </div>
+                <div class="search__result--isp">
+                    <span class="name"> ISP</span>
+                    <span class="result">ISP...</span>
+                </div>
+            </div>
+        </header>
+        <!--Leaf map-->
+        <div id="map"></div>
+        <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="https://github.com/Jim876633">Jim Huang</a>.
+        </div>
+        <script src="app.js"></script>
+        <!--Ipify API-->
+        <script
+            type="application/javascript"
+            src="https://api.ipify.org?format=jsonp&callback=getIP"
+        ></script>
+    </body>
+</html>

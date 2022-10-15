@@ -1,0 +1,141 @@
+$color-gray: hsl(0, 0%, 59%);
+$color-dark-gray: hsl(0, 0%, 17%);
+$color-white: #ffffff;
+$color-inValid: red;
+$color-valid: green;
+
+html {
+    font-size: 50.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    font-size: 1.8rem;
+}
+
+.search {
+    position: relative;
+    background: url("/images/pattern-bg.png");
+    text-align: center;
+    padding: 2rem 0 0;
+    z-index: 1;
+    &__title {
+        color: $color-white;
+        font-size: 3rem;
+    }
+    &__form {
+        display: flex;
+        margin: 2rem auto 5rem;
+        width: min(50rem, 90%);
+        border-radius: 1rem;
+
+        &--input {
+            // flex: 1 1;
+            width: 100%;
+            border: none;
+            border-radius: 1rem 0 0 1rem;
+            padding: 1.5rem 2rem;
+            &:focus {
+                outline: none;
+            }
+        }
+        &--submit {
+            display: block;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 0 1rem 1rem 0;
+            background: $color-dark-gray;
+            cursor: pointer;
+            .image {
+                vertical-align: middle;
+            }
+        }
+        &.valid {
+            outline: 3px solid $color-valid;
+        }
+        &.inValid {
+            position: relative;
+            outline: 3px solid $color-inValid;
+        }
+        &.inValid::after {
+            content: "Please search correct IPv4 or IPv6";
+            width: 100%;
+            position: absolute;
+            bottom: -4rem;
+            left: 0;
+            padding: 0.5rem 0;
+            border-radius: 1rem;
+            color: $color-white;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 1.5rem;
+            background: $color-inValid;
+        }
+    }
+    &__result {
+        background: $color-white;
+        border-radius: 1rem;
+        width: min(100rem, 90%);
+        margin: auto;
+        box-shadow: 0 1px 10px $color-gray;
+        & > * {
+            padding: 0.5rem;
+            .name {
+                color: $color-gray;
+                font-size: 1rem;
+                font-weight: 700;
+            }
+            .result {
+                display: block;
+                font-weight: 700;
+                margin: 0.5rem 0;
+            }
+        }
+    }
+}
+#map {
+    z-index: 0;
+    height: 100vh;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 2.5rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 1.8rem;
+    text-align: center;
+}
+.attribution a {
+    font-size: 1.8rem;
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 876px) {
+    html {
+        font-size: 62.5%;
+    }
+    .search__result {
+        display: flex;
+        justify-content: center;
+        & > * {
+            position: relative;
+            flex: 1 1;
+            text-align: left;
+            padding: 2rem;
+        }
+        & > div + div::before {
+            content: "";
+            position: absolute;
+            top: 1rem;
+            bottom: 1rem;
+            left: 0;
+            width: 1px;
+            background: $color-gray;
+        }
+    }
+}
