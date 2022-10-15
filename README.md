@@ -30,16 +30,16 @@ Users should be able to:
 
 Mobile
 
-![](/screenshot/desktop.jpeg)
+![](/screenshot//mobile.jpeg)
 
 Desktop
 
-![](/screenshot//mobile.jpeg)
+![](/screenshot/desktop.jpeg)
 
 ### Links
 
--   Solution URL: [fontend mentor solution]()
--   Live Site URL: [live site]()
+-   Solution URL: [fontend mentor solution](https://www.frontendmentor.io/solutions/vanilla-js-with-scss-YoKx0uA__U)
+-   Live Site URL: [live site](https://jim-ip-address-tracker-master.netlify.app/)
 
 ## My process
 
@@ -53,7 +53,7 @@ Desktop
 
 ### What I learned
 
-use Leaflet API to create the map.
+Use Leaflet API to create the map.
 
 ```js
 const map = L.map("map");
