@@ -75,3 +75,4 @@ marker.bindPopup("<b>Hello vistor !</b><br>IP address is here.").openPopup();
 ### Useful resources
 
 -   [IP RegExp](https://www.regextester.com/104038m) - This helped me to filter correct IP before fetch API.
+-   [Domain RegExp](https://regexr.com/3au3g) - This helped me to filter correct domain before fetch API.

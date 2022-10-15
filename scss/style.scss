@@ -61,7 +61,7 @@ html {
             outline: 3px solid $color-inValid;
         }
         &.inValid::after {
-            content: "Please search correct IPv4 or IPv6";
+            content: "Please search correct IPv4 、 IPv6 or Domain";
             width: 100%;
             position: absolute;
             bottom: -4rem;
