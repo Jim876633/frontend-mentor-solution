@@ -7,14 +7,6 @@ const inputEl = formEl.querySelector("input");
 const map = L.map("map");
 
 //================================================//
-//Get Local IP address
-//================================================//
-
-const getIP = (json) => {
-    fetchLocation(json.ip);
-};
-
-//================================================//
 //Loaction result render
 //================================================//
 
@@ -131,3 +123,4 @@ formEl.addEventListener("submit", submitHandler);
 
 inputEl.addEventListener("input", validAlert);
 inputEl.addEventListener("blur", blurInput);
+fetchLocation("");
