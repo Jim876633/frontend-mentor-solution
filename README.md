@@ -14,7 +14,7 @@ Switch to the diffent branch and the branch name is the challenge title.
 | Interactive rating component | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/interactive-rating-component) | [Demo](https://jim-interative-rating-component.netlify.app/) |
 | Url shortening api master | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/url-shortening-api-master) | [Demo](https://jim-url-shortening-api-master.netlify.app/) |
 | Ip address tracker master | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/ip-address-tracker-master) | [Demo](https://jim-ip-address-tracker-master.netlify.app/) |
-
+| FAQ accordion card main | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/faq-accordion-card-main) | [Demo](https://jim-faq-accordion-card-main.netlify.app/) |
 
 
 
