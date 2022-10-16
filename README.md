@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [fontend mentor solution]()
--   Live Site URL: [live site]()
+-   Solution URL: [fontend mentor solution](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam/hub/scss-without-javascript-KzJH3xHzGC)
+-   Live Site URL: [live site](https://jim-faq-accordion-card-main.netlify.app/)
 
 ## My process
 
