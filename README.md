@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [fontend mentor solution]()
--   Live Site URL: [live site]()
+-   Solution URL: [fontend mentor solution](https://www.frontendmentor.io/solutions/use-chartjs-and-scss-hwgdCr9e_m)
+-   Live Site URL: [live site](https://jim-expenses-chart-component-main.netlify.app/)
 
 ## My process
 
