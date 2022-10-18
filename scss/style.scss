@@ -39,24 +39,29 @@ html {
 body {
     position: relative;
     background: $color-background;
-    padding: 10rem 0;
-    @include respond(desktop) {
-        padding: 3rem 0 5rem;
-    }
+    min-height: 100vh;
+    padding: 5rem 0;
 }
 
 .cards {
+    position: relative;
+    display: grid;
     width: 90%;
     margin: auto;
-    display: grid;
     gap: 3rem;
     @include respond(ipad) {
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: repeat(2, 1fr);
     }
     @include respond(desktop) {
-        grid-template-rows: repeat(2, 1fr);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        grid-template-rows: repeat(2, 40vh);
         grid-template-columns: repeat(4, 1fr);
+        align-content: center;
     }
     .card {
         position: relative;
