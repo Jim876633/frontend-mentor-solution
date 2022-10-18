@@ -1,0 +1,235 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1.8rem;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  position: relative;
+  background: hsl(226deg, 43%, 10%);
+  padding: 10rem 0;
+}
+@media (min-width: 768px) {
+  body {
+    padding: 3rem 0 5rem;
+  }
+}
+
+.cards {
+  width: 90%;
+  margin: auto;
+  display: grid;
+  gap: 3rem;
+}
+@media (min-width: 576px) {
+  .cards {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .cards {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.cards .card {
+  position: relative;
+  border-radius: 1rem;
+  padding-top: 4rem;
+}
+.cards .card--icon {
+  overflow: hidden;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+}
+.cards .card--icon img {
+  margin-top: -1rem;
+}
+.cards .card .info {
+  position: relative;
+  bottom: -2px;
+  height: 100%;
+  padding: 3rem;
+  border-radius: 1rem;
+  background: hsl(235deg, 46%, 20%);
+  cursor: pointer;
+}
+@media (min-width: 576px) {
+  .cards .card .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+.cards .card .info:hover {
+  background: hsl(235deg, 45%, 51%);
+}
+.cards .card .info__top {
+  display: flex;
+  align-items: center;
+}
+.cards .card .info__top > * {
+  color: #ffffff;
+}
+.cards .card .info__top--title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-right: auto;
+}
+.cards .card .info__top--ellipsis img {
+  vertical-align: middle;
+}
+.cards .card .info__bottom {
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 576px) {
+  .cards .card .info__bottom {
+    flex-direction: column;
+  }
+  .cards .card .info__bottom > * {
+    margin-right: auto;
+  }
+}
+.cards .card .info__bottom > * {
+  color: hsl(236deg, 100%, 87%);
+}
+.cards .card .info__bottom--time {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-right: auto;
+}
+@media (min-width: 576px) {
+  .cards .card .info__bottom--time {
+    font-size: 5rem;
+  }
+}
+@media (min-width: 768px) {
+  .cards .card .info__bottom--time {
+    font-size: 3.5vw;
+  }
+}
+.cards .card .info__bottom--prevTime {
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+.cards__user {
+  background: hsl(235deg, 46%, 20%);
+  border-radius: 1rem;
+}
+@media (min-width: 576px) {
+  .cards__user {
+    grid-column: 1/3;
+  }
+}
+@media (min-width: 768px) {
+  .cards__user {
+    grid-column: 1/1;
+    grid-row: 1/3;
+  }
+}
+.cards__user--info {
+  display: flex;
+  align-items: center;
+  padding: 4rem 3rem;
+  gap: 2rem;
+  background: hsl(246deg, 80%, 60%);
+  border-radius: 1rem;
+}
+@media (min-width: 768px) {
+  .cards__user--info {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 10rem;
+  }
+}
+.cards__user--info .user-image {
+  width: 6.5rem;
+  height: 6.5rem;
+  border: 0.2rem solid #ffffff;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.cards__user--info .user-image img {
+  width: 100%;
+  vertical-align: middle;
+}
+.cards__user--info .user-info > * {
+  display: block;
+}
+.cards__user--info .user-info--text {
+  font-size: 1.5rem;
+  color: hsl(236deg, 100%, 87%);
+}
+.cards__user--info .user-info--name {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+}
+@media (min-width: 768px) {
+  .cards__user--info .user-info--name {
+    font-size: 3rem;
+  }
+}
+.cards__user--tags {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+}
+@media (min-width: 768px) {
+  .cards__user--tags {
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+}
+.cards__user--tags .tag {
+  cursor: pointer;
+  color: hsl(236deg, 100%, 87%);
+}
+.cards__user--tags .tag:hover, .cards__user--tags .tag.active {
+  color: #ffffff;
+}
+.cards__work {
+  background: hsl(15deg, 100%, 70%);
+}
+.cards__play {
+  background: hsl(195deg, 74%, 62%);
+}
+.cards__study {
+  background: hsl(348deg, 100%, 68%);
+}
+.cards__exercise {
+  background: hsl(145deg, 58%, 55%);
+}
+.cards__social {
+  background: hsl(264deg, 64%, 52%);
+}
+.cards__selfcare {
+  background: hsl(43deg, 84%, 65%);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+  font-size: 1.5rem;
+}/*# sourceMappingURL=style.css.map */

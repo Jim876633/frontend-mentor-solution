@@ -1,0 +1,242 @@
+$color-user: hsl(246, 80%, 60%);
+$color-work: hsl(15, 100%, 70%);
+$color-play: hsl(195, 74%, 62%);
+$color-study: hsl(348, 100%, 68%);
+$color-exercise: hsl(145, 58%, 55%);
+$color-social: hsl(264, 64%, 52%);
+$color-selfcare: hsl(43, 84%, 65%);
+$color-background: hsl(226, 43%, 10%);
+$color-card: hsl(235, 46%, 20%);
+$color-card-hover: hsl(235, 45%, 51%);
+$color-dark-white: hsl(236, 100%, 87%);
+$color-white: #ffffff;
+
+@mixin respond($media) {
+    @if $media == ipad {
+        @media (min-width: 576px) {
+            @content;
+        }
+    }
+    @if $media ==desktop {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1.8rem;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    position: relative;
+    background: $color-background;
+    padding: 10rem 0;
+    @include respond(desktop) {
+        padding: 3rem 0 5rem;
+    }
+}
+
+.cards {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    gap: 3rem;
+    @include respond(ipad) {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond(desktop) {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .card {
+        position: relative;
+        border-radius: 1rem;
+        padding-top: 4rem;
+        &--icon {
+            overflow: hidden;
+            position: absolute;
+            right: 1rem;
+            top: 0;
+            img {
+                margin-top: -1rem;
+            }
+        }
+        .info {
+            position: relative;
+            bottom: -2px;
+            height: 100%;
+            padding: 3rem;
+            border-radius: 1rem;
+            background: $color-card;
+            cursor: pointer;
+            @include respond(ipad) {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            &:hover {
+                background: $color-card-hover;
+            }
+            &__top {
+                display: flex;
+                align-items: center;
+                & > * {
+                    color: $color-white;
+                }
+                &--title {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    margin-right: auto;
+                }
+                &--ellipsis {
+                    img {
+                        vertical-align: middle;
+                    }
+                }
+            }
+            &__bottom {
+                display: flex;
+                align-items: center;
+                @include respond(ipad) {
+                    flex-direction: column;
+                    & > * {
+                        margin-right: auto;
+                    }
+                }
+                & > * {
+                    color: $color-dark-white;
+                }
+                &--time {
+                    font-size: 3rem;
+                    font-weight: 300;
+                    margin-right: auto;
+                    @include respond(ipad) {
+                        font-size: 5rem;
+                    }
+                    @include respond(desktop) {
+                        font-size: 3.5vw;
+                    }
+                }
+
+                &--prevTime {
+                    font-size: 1.5rem;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+    &__user {
+        background: $color-card;
+        border-radius: 1rem;
+        @include respond(ipad) {
+            grid-column: 1/3;
+        }
+        @include respond(desktop) {
+            grid-column: 1/1;
+            grid-row: 1/3;
+        }
+        &--info {
+            display: flex;
+            align-items: center;
+            padding: 4rem 3rem;
+            gap: 2rem;
+            background: $color-user;
+            border-radius: 1rem;
+            @include respond(desktop) {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-bottom: 10rem;
+            }
+            .user-image {
+                width: 6.5rem;
+                height: 6.5rem;
+                border: 0.2rem solid $color-white;
+                border-radius: 50%;
+                flex-shrink: 0;
+                img {
+                    width: 100%;
+                    vertical-align: middle;
+                }
+            }
+            .user-info {
+                & > * {
+                    display: block;
+                }
+                &--text {
+                    font-size: 1.5rem;
+                    color: $color-dark-white;
+                }
+                &--name {
+                    color: $color-white;
+                    font-size: 2.5rem;
+                    font-weight: 300;
+                    margin-top: 0.5rem;
+                    @include respond(desktop) {
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+        &--tags {
+            display: flex;
+            justify-content: space-between;
+            padding: 3rem;
+            @include respond(desktop) {
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 1rem;
+            }
+            .tag {
+                cursor: pointer;
+                color: $color-dark-white;
+                &:hover,
+                &.active {
+                    color: $color-white;
+                }
+            }
+        }
+    }
+    &__work {
+        background: $color-work;
+    }
+    &__play {
+        background: $color-play;
+    }
+    &__study {
+        background: $color-study;
+    }
+    &__exercise {
+        background: $color-exercise;
+    }
+    &__social {
+        background: $color-social;
+    }
+    &__selfcare {
+        background: $color-selfcare;
+    }
+}
+
+.attribution {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 1.5rem;
+    text-align: center;
+    color: $color-white;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+    font-size: 1.5rem;
+}
