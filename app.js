@@ -11,6 +11,21 @@ const renderData = (data) => {
         const userCard = document.querySelector(".cards__user");
         cards.innerHTML = "";
         cards.insertAdjacentElement("beforeend", userCard);
+        const formatTime = (time) => {
+            const unit = time ? "hrs" : "hr";
+            return time + unit;
+        };
+        let prevTag;
+        switch (tag) {
+            case "daily":
+                prevTag = "yesturday";
+                break;
+            case "weekly":
+                prevTag = "last week";
+                break;
+            case "monthly":
+                prevTag = "last month";
+        }
 
         data.forEach((item) => {
             const cards = document.querySelector(".cards");
@@ -22,11 +37,11 @@ const renderData = (data) => {
                 .replace(/\s/g, "-")
                 .toLowerCase()}.svg`;
 
-            const time = item.timeframes[tag].current;
+            const time = formatTime(item.timeframes[tag].current);
 
-            const prevTime = `Last ${tag.slice(0, -2).replace(/i/g, "y")} - ${
+            const prevTime = `${prevTag} - ${formatTime(
                 item.timeframes[tag].previous
-            }hrs`;
+            )}`;
 
             const html = ` <div class="card ${cardClass}">
                 <div class="card--icon">
@@ -42,7 +57,7 @@ const renderData = (data) => {
                         /></span>
                     </div>
                     <div class="info__bottom">
-                        <span class="info__bottom--time">${time}hrs</span>
+                        <span class="info__bottom--time">${time}</span>
                         <span class="info__bottom--prevTime">
                             ${prevTime}
                         </span>
