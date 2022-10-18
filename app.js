@@ -12,7 +12,7 @@ const renderData = (data) => {
         cards.innerHTML = "";
         cards.insertAdjacentElement("beforeend", userCard);
         const formatTime = (time) => {
-            const unit = time ? "hrs" : "hr";
+            const unit = time === 0 || time === 1 ? "hr" : "hrs";
             return time + unit;
         };
         let prevTag;
