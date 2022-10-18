@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Fontend mentor solution]()
--   Live Site URL: [Live site]()
+-   Solution URL: [Fontend mentor solution](https://www.frontendmentor.io/solutions/use-scss-and-fetch-datajson-Q7OR60VSPF)
+-   Live Site URL: [Live site](https://jim-time-tracking-dashboard.netlify.app/)
 
 ## My process
 
