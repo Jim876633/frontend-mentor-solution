@@ -1,0 +1,113 @@
+$color-orange: hsl(10, 79%, 65%);
+$color-cyan: hsl(186, 34%, 60%);
+
+$color-brown: hsl(25, 47%, 15%);
+$color-gray: hsl(28, 10%, 53%);
+$color-cream: hsl(27, 66%, 92%);
+$color-white: hsl(33, 100%, 98%);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: "DM Sans", sans-serif;
+}
+body {
+    background: $color-cream;
+}
+.container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: min(90%, 400px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .balance {
+        background: $color-orange;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        &__text {
+            display: flex;
+            flex-direction: column;
+            color: $color-white;
+            .price {
+                font-size: 25px;
+                font-weight: 700;
+            }
+        }
+        &__logo {
+            height: 2rem;
+        }
+    }
+    .card {
+        background: $color-white;
+        border-radius: 10px;
+        margin-top: 20px;
+        padding: 20px;
+        &__title {
+            color: $color-brown;
+            font-size: 25px;
+            font-weight: 700;
+        }
+        &__chart {
+            border-bottom: 1px solid $color-gray;
+        }
+        &__info {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            &--price,
+            &--percent {
+                display: flex;
+                flex-direction: column;
+            }
+            &--price {
+                justify-content: center;
+                gap: 5px;
+                .text {
+                    color: $color-gray;
+                    font-size: 14px;
+                }
+                .price {
+                    color: $color-brown;
+                    font-size: 25px;
+                    font-weight: 700;
+                }
+            }
+            &--percent {
+                justify-content: flex-end;
+                align-items: flex-end;
+                .percent {
+                    color: $color-brown;
+                    font-weight: 700;
+                }
+                .text {
+                    font-size: 14px;
+                    color: $color-gray;
+                }
+            }
+        }
+    }
+}
+
+.attribution {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 16px;
+    text-align: center;
+}
+.attribution a {
+    font-size: 16px;
+    color: hsl(228, 45%, 44%);
+}

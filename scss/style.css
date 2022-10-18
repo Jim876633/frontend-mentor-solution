@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+  background: hsl(27deg, 66%, 92%);
+}
+
+.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: min(90%, 400px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container .balance {
+  background: hsl(10deg, 79%, 65%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.container .balance__text {
+  display: flex;
+  flex-direction: column;
+  color: hsl(33deg, 100%, 98%);
+}
+.container .balance__text .price {
+  font-size: 25px;
+  font-weight: 700;
+}
+.container .balance__logo {
+  height: 2rem;
+}
+.container .card {
+  background: hsl(33deg, 100%, 98%);
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 20px;
+}
+.container .card__title {
+  color: hsl(25deg, 47%, 15%);
+  font-size: 25px;
+  font-weight: 700;
+}
+.container .card__chart {
+  border-bottom: 1px solid hsl(28deg, 10%, 53%);
+}
+.container .card__info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .card__info--price, .container .card__info--percent {
+  display: flex;
+  flex-direction: column;
+}
+.container .card__info--price {
+  justify-content: center;
+  gap: 5px;
+}
+.container .card__info--price .text {
+  color: hsl(28deg, 10%, 53%);
+  font-size: 14px;
+}
+.container .card__info--price .price {
+  color: hsl(25deg, 47%, 15%);
+  font-size: 25px;
+  font-weight: 700;
+}
+.container .card__info--percent {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.container .card__info--percent .percent {
+  color: hsl(25deg, 47%, 15%);
+  font-weight: 700;
+}
+.container .card__info--percent .text {
+  font-size: 14px;
+  color: hsl(28deg, 10%, 53%);
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 16px;
+  text-align: center;
+}
+
+.attribution a {
+  font-size: 16px;
+  color: hsl(228deg, 45%, 44%);
+}/*# sourceMappingURL=style.css.map */
