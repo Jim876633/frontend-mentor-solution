@@ -18,6 +18,7 @@ Switch to the diffent branch and the branch name is the challenge title.
 | Expenses chart component | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/expenses-chart-component-main) | [Demo](https://jim-expenses-chart-component-main.netlify.app/) |
 | Time tracking dashboard | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/time-tracking-dashboard-main) | [Demo](https://jim-time-tracking-dashboard.netlify.app/) |
 | Static job listings | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/static-job-listings-master) | [Demo](https://jim-static-job-listings.netlify.app/) |
+| Three column preview card component | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/three-column-preview-card-component) | [Demo](https://jin-three-column-preview-card.netlify.app/) |
 
 
 
