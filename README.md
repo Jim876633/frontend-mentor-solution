@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Fontend mentor solution]()
--   Live Site URL: [Live site]()
+-   Solution URL: [Fontend mentor solution](https://www.frontendmentor.io/solutions/use-react-with-styled-components-XX6aY56s74)
+-   Live Site URL: [Live site](https://jim-static-job-listings.netlify.app/)
 
 ## My process
 
