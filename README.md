@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Fontend mentor solution]()
--   Live Site URL: [Live site]()
+-   Solution URL: [Fontend mentor solution](https://www.frontendmentor.io/solutions/use-flexbox-with-tailwindcss-tnqSGdPHP9)
+-   Live Site URL: [Live site](https://jin-three-column-preview-card.netlify.app/)
 
 ## My process
 
