@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | 3-column preview card component</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            * {
+                font-family: "Lexend Deca", sans-serif;
+                box-sizing: border-box;
+            }
+        </style>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            orange: "hsl(31, 77%, 52%)",
+                            cyan: "hsl(184, 100%, 22%)",
+                            cyan_dark: "hsl(179, 100%, 13%)",
+                            gray: "hsl(0, 0%, 100%)",
+                            white: "hsl(0, 0%, 95%)",
+                        },
+                        fontFamily: {
+                            Lexend: "Lexend Deca, sans-serif",
+                            big: "Big Shoulders Display, cursive",
+                        },
+                    },
+                },
+            };
+        </script>
+    </head>
+    <body class="py-10 relative min-h-screen">
+        <div
+            class="flex flex-col sm:flex-row w-11/12 max-w-3xl m-auto rounded-lg overflow-hidden sm:absolute sm:top-0 sm:bottom-0 sm:left-0 sm:right-0 sm:h-96"
+        >
+            <div
+                class="w-full bg-orange p-10 flex flex-col gap-5 items-start justify-between"
+            >
+                <img src="/images/icon-sedans.svg" alt="icon" class="h-8" />
+                <h1 class="text-3xl text-white font-big uppercase">Sedans</h1>
+                <p class="text-gray/75 text-xs leading-5">
+                    Choose a sedan for its affordability and excellent fuel
+                    economy. Ideal for cruising in the city or on your next road
+                    trip.
+                </p>
+                <button
+                    class="rounded-full bg-white py-2 px-5 text-orange text-sm border-white border-2 sm:hover:bg-transparent sm:hover:text-white sm:mt-10"
+                >
+                    Learn More
+                </button>
+            </div>
+            <div
+                class="w-full bg-cyan p-10 flex flex-col gap-5 items-start justify-between"
+            >
+                <img src="/images/icon-suvs.svg" alt="icon" class="h-8" />
+                <h1 class="text-3xl text-white font-big uppercase">SUVs</h1>
+                <p class="text-gray/75 text-xs leading-5">
+                    Take an SUV for its spacious interior, power, and
+                    versatility. Perfect for your next family vacation and
+                    off-road adventures.
+                </p>
+                <button
+                    class="rounded-full bg-white py-2 px-5 text-cyan text-sm border-white border-2 sm:hover:bg-transparent sm:hover:text-white sm:mt-10"
+                >
+                    Learn More
+                </button>
+            </div>
+            <div
+                class="w-full bg-cyan_dark p-10 flex flex-col gap-5 items-start justify-between"
+            >
+                <img src="/images/icon-luxury.svg" alt="icon" class="h-8" />
+                <h1 class="text-3xl text-white font-big uppercase">Luxury</h1>
+                <p class="text-gray/75 text-xs leading-5">
+                    Cruise in the best car brands without the bloated prices.
+                    Enjoy the enhanced comfort of a luxury rental and arrive in
+                    style.
+                </p>
+                <button
+                    class="rounded-full bg-white py-2 px-5 text-cyan_dark text-sm border-white border-2 sm:hover:bg-transparent sm:hover:text-white sm:mt-10"
+                >
+                    Learn More
+                </button>
+            </div>
+        </div>
+        <div class="absolute bottom-2 text-sm w-full text-center">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                class="text-cyan underline"
+                >Frontend Mentor</a
+            >. Coded by
+            <a href="https://github.com/Jim876633" class="text-cyan underline"
+                >Jim Huang</a
+            >.
+        </div>
+    </body>
+</html>
