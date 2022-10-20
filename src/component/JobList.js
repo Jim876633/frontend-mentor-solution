@@ -24,10 +24,9 @@ const JobList = () => {
 
     const filterJobList = useMemo(() => {
         return jobList.filter((jobInfo) => {
-            const matchTagList = jobInfo.tags.filter((jobTag) => {
-                return filterTagList.some((filterTag) => filterTag === jobTag);
+            return filterTagList.every((filterTag) => {
+                return jobInfo.tags.includes(filterTag);
             });
-            return matchTagList.length === filterTagList.length;
         });
     }, [filterTagList, jobList]);
 
