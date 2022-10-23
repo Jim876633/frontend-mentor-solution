@@ -3,7 +3,7 @@ const input = document.querySelector("input");
 const alert = document.querySelector(".alert");
 const btn = document.querySelector("button");
 
-const alertInputClass = ["outline-red", "outline-2"];
+const alertInputClass = ["ring-2", "ring-red"];
 const alertImageClass = [
     "after:bg-[url(images/icon-error.svg)]",
     "after:bg-cover",
