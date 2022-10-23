@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Fontend mentor solution]()
--   Live Site URL: [Live site]()
+-   Solution URL: [Fontend mentor solution](https://www.frontendmentor.io/solutions/responsive-with-flex-and-use-tailwindcss-W97YASJ_Nc)
+-   Live Site URL: [Live site](https://jim-base-apparel-comming-soon.netlify.app/)
 
 ## My process
 
@@ -41,4 +41,4 @@ Users should be able to:
 -   CSS custom properties
 -   Flexbox
 -   Mobile-first workflow
--   [Tailwindcss](https://tailwindcss.com/) - For
+-   [Tailwindcss](https://tailwindcss.com/) - For styles
