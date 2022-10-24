@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Fontend mentor solution]()
--   Live Site URL: [Live site]()
+-   Solution URL: [Fontend mentor solution](https://www.frontendmentor.io/solutions/use-react-with-styledcomponents-VQXL1Qptiy)
+-   Live Site URL: [Live site](https://jim-launch-countdown-timer.netlify.app/)
 
 ## My process
 
