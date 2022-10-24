@@ -1,0 +1,43 @@
+:root {
+    --primary-blue: hsl(237, 18%, 59%);
+    --primary-red: hsl(345, 95%, 68%);
+    --white: hsl(0, 0%, 100%);
+    --dark-blue-1: hsl(236, 21%, 26%);
+    --dark-blue-2: hsl(235, 16%, 14%);
+    --dark-blue-3: hsl(234, 17%, 12%);
+    --dark: hsl(234, 17%, 8%);
+}
+
+html {
+    font-size: 50%;
+}
+* {
+    font-family: "Red Hat Text", sans-serif;
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+
+@keyframes font-rotate {
+    0% {
+        transform: rotateX(0deg);
+    }
+    100% {
+        transform: rotateX(-180deg);
+    }
+}
+@keyframes back-rotate {
+    0% {
+        transform: rotateX(180deg);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
