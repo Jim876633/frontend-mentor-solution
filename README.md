@@ -21,6 +21,7 @@ Switch to the diffent branch and the branch name is the challenge title.
 | Three column preview card component | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/three-column-preview-card-component) | [Demo](https://jin-three-column-preview-card.netlify.app/) |
 | Base apparel comming soon | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/base-apparel-comming-soon) | [Demo](https://jim-base-apparel-comming-soon.netlify.app/) |
 | Launch countdown timer | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/launch-countdown-timer) | [Demo](https://jim-launch-countdown-timer.netlify.app/) |
+| Textimonials grid section | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/textimonials-grid-section) | [Demo](https://jim-textimonials-grid-section.netlify.app/) |
 
 
 
