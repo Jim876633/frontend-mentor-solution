@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Fontend mentor solution]()
--   Live Site URL: [Live site]()
+-   Solution URL: [Fontend mentor solution](https://www.frontendmentor.io/solutions/use-grid-with-scss-peOwFG-1jj)
+-   Live Site URL: [Live site](https://jim-textimonials-grid-section.netlify.app/)
 
 ## My process
 
