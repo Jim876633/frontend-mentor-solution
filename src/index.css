@@ -1,0 +1,43 @@
+:root {
+    --color-background: hsl(0, 0%, 98%);
+    --color-element: hsl(0, 0%, 100%);
+    --color-text: hsl(200, 15%, 8%);
+    --color-input: hsl(0, 0%, 52%);
+    --color-shadow: hsl(0, 0%, 70%);
+    --color-hover: hsl(0, 0%, 60%);
+}
+
+#dark-mode {
+    --color-background: hsl(207, 26%, 17%);
+    --color-element: hsl(209, 23%, 22%);
+    --color-text: hsl(0, 0%, 100%);
+    --color-shadow: hsl(207, 26%, 17%);
+    --color-input: hsl(0, 0%, 100%);
+    --color-hover: hsl(209, 23%, 60%);
+}
+
+html {
+    font-size: 62.8%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito Sans", sans-serif;
+    transition: background 0.2s;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--color-element);
+    background: var(--color-hover);
+}

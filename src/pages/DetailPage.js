@@ -1,0 +1,135 @@
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import LoadingPage from "./LoadingPage";
+import ErrorPage from "./ErrorPage";
+import DetailPageStyle, {
+    BackButton,
+    ArrowLeft,
+    DetailImage,
+    DetailText,
+    DetailInfo,
+    BorderButtons,
+    BorderButton,
+} from "./DetailPage.style";
+
+import { useGetCountryDetial } from "../components/api/fetchData";
+import { useDataContext } from "../components/context/DataContextProvider";
+
+const countries = require("i18n-iso-countries");
+countries.registerLocale(require("i18n-iso-countries/langs/en.json"));
+
+const DetailPage = () => {
+    const { detailId } = useParams();
+
+    const { data, isLoading, isError } = useGetCountryDetial(detailId);
+
+    const { searchHandler } = useDataContext();
+
+    useEffect(() => {
+        searchHandler("name", "");
+    }, [detailId, searchHandler]);
+
+    if (isLoading) {
+        return <LoadingPage height={"90vh"} />;
+    }
+    if (isError || data.status !== "officially-assigned") {
+        return <ErrorPage />;
+    }
+
+    const {
+        name,
+        nativeName,
+        image,
+        population,
+        region,
+        subregion,
+        capital,
+        tld,
+        currencies,
+        languages,
+        borders,
+    } = {
+        name: data.name.common,
+        nativeName: Object.values(data.name.nativeName),
+        image: data.flags.svg,
+        population: data.population
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+        region: data.region,
+        subregion: data.subregion,
+        capital: data.capital,
+        tld: data.tld,
+        currencies: Object.values(data.currencies),
+        languages: Object.values(data.languages),
+        borders: data.borders,
+    };
+
+    return (
+        <DetailPageStyle>
+            <BackButton to="/">
+                <ArrowLeft />
+                Back
+            </BackButton>
+            <DetailImage>
+                <img src={image} alt={name} />
+            </DetailImage>
+            <DetailText>
+                <h2>{name}</h2>
+                <DetailInfo>
+                    <p>
+                        <span>native name:</span>
+                        {nativeName
+                            .map((item) => item.common)
+                            .slice(0, 4)
+                            .join(", ")}
+                    </p>
+                    <p>
+                        <span>population:</span>
+                        {population}
+                    </p>
+                    <p>
+                        <span>region:</span>
+                        {region}
+                    </p>
+                    <p>
+                        <span>sub region:</span>
+                        {subregion}
+                    </p>
+                    <p>
+                        <span>capital:</span>
+                        {capital}
+                    </p>
+                </DetailInfo>
+                <DetailInfo>
+                    <p>
+                        <span>top level domain:</span>
+                        {tld}
+                    </p>
+                    <p>
+                        <span>currencies:</span>
+                        {currencies
+                            .map((item) => item.name + " " + item.symbol)
+                            .join(", ")}
+                    </p>
+                    <p>
+                        <span>languages:</span>
+                        {languages
+                            .map((item) => item)
+                            .slice(0, 4)
+                            .join(", ")}
+                    </p>
+                </DetailInfo>
+                <h3>border countreis:</h3>
+                <BorderButtons>
+                    {borders.map((border) => (
+                        <BorderButton key={border} to={`/${border}`}>
+                            {countries.getName(border, "en")}
+                        </BorderButton>
+                    ))}
+                </BorderButtons>
+            </DetailText>
+        </DetailPageStyle>
+    );
+};
+
+export default DetailPage;
