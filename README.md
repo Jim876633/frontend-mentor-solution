@@ -32,11 +32,11 @@ Users should be able to:
 
 -   Home page
 
-![](./public/screenshot/desktop-1.jpeg)
+![](./public/screenshot/desktop-1.png)
 
 -   Detail page
 
-![](./public/screenshot/desktop-2.jpeg)
+![](./public/screenshot/desktop-2.png)
 
 ### Links
 
