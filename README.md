@@ -40,8 +40,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Fontend mentor solution]()
--   Live Site URL: [Live site]()
+-   Solution URL: [Fontend mentor solution](https://www.frontendmentor.io/solutions/use-react-with-reactquery-and-styledcomponent-VRmBVBtzvM)
+-   Live Site URL: [Live site](https://jim-rest-countries-api.netlify.app/)
 
 ## My process
 
