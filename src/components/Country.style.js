@@ -5,7 +5,6 @@ const CountryStyle = styled(Link)`
     width: max(85%, 30rem);
     height: 35rem;
     flex-shrink: 0;
-    /* margin: auto; */
     border-radius: 1rem;
     background: var(--color-element);
     overflow: hidden;

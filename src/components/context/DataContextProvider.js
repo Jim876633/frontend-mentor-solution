@@ -9,12 +9,9 @@ export const useDataContext = () => {
 const DataContextProvider = ({ children }) => {
     const [query, setQuery] = useState({ name: "", region: "all" });
 
-    const searchHandler = useCallback(
-        (type, value) => {
-            setQuery({ ...query, [type]: value });
-        },
-        [query]
-    );
+    const searchHandler = useCallback((type, value) => {
+        setQuery({ ...query, [type]: value });
+    }, []);
 
     return (
         <DataContext.Provider
