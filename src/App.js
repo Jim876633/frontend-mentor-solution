@@ -12,7 +12,7 @@ function App() {
     };
 
     return (
-        <AppStyle id={darkMode ? "dark-mode" : ""}>
+        <AppStyle id={darkMode ? "dark-mode" : "light-mode"}>
             <Header toggleMode={toggleModeHandler} darkMode={darkMode} />
             <Routes>
                 <Route path="/" element={<HomePage />} />

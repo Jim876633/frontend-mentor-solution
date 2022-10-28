@@ -11,13 +11,6 @@ const SearchStyle = styled.div`
     box-shadow: 1px 1px 5px var(--color-shadow);
 `;
 
-export const SearchButton = styled.button`
-    display: grid;
-    place-content: center;
-    width: 3rem;
-    height: 100%;
-`;
-
 export const SearchInput = styled.input`
     width: 100%;
     padding: 0.5rem 1rem;
@@ -34,6 +27,7 @@ export const SearchInput = styled.input`
 `;
 
 export const SearchIcon = styled(FaSearch)`
+    width: 3rem;
     color: var(--color-input);
 `;
 

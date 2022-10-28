@@ -90,6 +90,8 @@ const CountryList = () => {
                     data-page={pageIndex}
                     onClick={pageClickHandler}
                     active={page === pageIndex}
+                    type="button"
+                    title={`page${pageIndex + 1}`}
                 >
                     {pageIndex + 1}
                 </PageButton>
@@ -103,6 +105,8 @@ const CountryList = () => {
             ))}
             <PageButtons>
                 <PrevButton
+                    type="button"
+                    title="prev-page"
                     active={page === 0}
                     onClick={() => setPage((prev) => prev - 1)}
                 >
@@ -110,6 +114,8 @@ const CountryList = () => {
                 </PrevButton>
                 {pageButtons}
                 <NextButton
+                    type="button"
+                    title="next-page"
                     active={page === totalPages - 1}
                     onClick={() => setPage((prev) => prev + 1)}
                 >

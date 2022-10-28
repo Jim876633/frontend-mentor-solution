@@ -27,7 +27,7 @@ const DetailPage = () => {
 
     useEffect(() => {
         searchHandler("name", "");
-    }, [detailId, searchHandler]);
+    }, [searchHandler]);
 
     if (isLoading) {
         return <LoadingPage height={"90vh"} />;

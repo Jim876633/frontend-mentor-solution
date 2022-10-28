@@ -1,9 +1,5 @@
 import { useDataContext } from "../context/DataContextProvider";
-import SearchStyle, {
-    SearchIcon,
-    SearchInput,
-    SearchButton,
-} from "./Search.style";
+import SearchStyle, { SearchIcon, SearchInput } from "./Search.style";
 
 const Search = () => {
     const { searchHandler } = useDataContext();
@@ -13,9 +9,7 @@ const Search = () => {
 
     return (
         <SearchStyle>
-            <SearchButton>
-                <SearchIcon />
-            </SearchButton>
+            <SearchIcon />
             <SearchInput
                 placeholder="Search for a country or capitial..."
                 type="text"

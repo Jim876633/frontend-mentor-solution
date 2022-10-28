@@ -5,7 +5,7 @@ const Country = ({ id, image, name, population, region, capital }) => {
     return (
         <CountryStyle to={id}>
             <CountryImage>
-                <img src={image} alt={name.common} />
+                <img src={image} alt={name} />
             </CountryImage>
             <CountryInfo>
                 <h2>{name}</h2>

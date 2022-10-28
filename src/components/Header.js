@@ -7,7 +7,7 @@ const Header = ({ toggleMode, darkMode }) => {
     return (
         <HeaderStyle>
             <HeaderTitle>Where in the world?</HeaderTitle>
-            <ModeButton onClick={toggleMode}>
+            <ModeButton onClick={toggleMode} title="toggle-mode" type="button">
                 <ModeIcon as={darkMode ? FiSun : HiOutlineMoon} />
                 {darkMode ? "Light Mode" : "Dark Mode"}
             </ModeButton>

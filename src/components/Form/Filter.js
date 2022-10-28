@@ -12,7 +12,11 @@ const Filter = () => {
 
     return (
         <FilterStyle>
-            <FilterSelect onChange={selectHandler}>
+            <FilterSelect
+                onChange={selectHandler}
+                name="filter-select"
+                title="filter-select"
+            >
                 <FilterOption value="all">--filter by region--</FilterOption>
                 {regions.map((region) => (
                     <FilterOption key={region} value={region}>
