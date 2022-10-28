@@ -24,7 +24,7 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-family: "Nunito Sans", sans-serif;
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.2s;
 }
 
 button {
@@ -40,4 +40,5 @@ a {
 a:hover {
     color: var(--color-element);
     background: var(--color-hover);
+    transform: scale(1.05);
 }

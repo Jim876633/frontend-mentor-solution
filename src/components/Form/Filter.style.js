@@ -14,6 +14,7 @@ export const FilterSelect = styled.select`
     border: none;
     padding: 1.5rem 0;
     text-transform: capitalize;
+    font-size: 1.5rem;
     color: var(--color-text);
     background: var(--color-element);
     &:focus {

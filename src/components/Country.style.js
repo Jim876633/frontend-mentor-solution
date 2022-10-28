@@ -29,6 +29,7 @@ export const CountryInfo = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: 1.5rem;
     h2 {
         font-size: 2rem;
         margin: 1rem 0;
