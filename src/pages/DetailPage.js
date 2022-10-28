@@ -35,7 +35,6 @@ const DetailPage = () => {
     if (isError || data.status !== "officially-assigned") {
         return <ErrorPage />;
     }
-
     const {
         name,
         nativeName,
@@ -48,21 +47,13 @@ const DetailPage = () => {
         currencies,
         languages,
         borders,
-    } = {
-        name: data.name.common,
-        nativeName: Object.values(data.name.nativeName),
-        image: data.flags.svg,
-        population: data.population
-            .toString()
-            .replace(/\B(?=(\d{3})+(?!\d))/g, ","),
-        region: data.region,
-        subregion: data.subregion,
-        capital: data.capital,
-        tld: data.tld,
-        currencies: Object.values(data.currencies),
-        languages: Object.values(data.languages),
-        borders: data.borders,
-    };
+    } = data;
+
+    const borderComponents = borders.map((border) => (
+        <BorderButton key={border} to={`/${border}`}>
+            {countries.getName(border, "en")}
+        </BorderButton>
+    ));
 
     return (
         <DetailPageStyle>
@@ -121,11 +112,9 @@ const DetailPage = () => {
                 </DetailInfo>
                 <h3>border countreis:</h3>
                 <BorderButtons>
-                    {borders.map((border) => (
-                        <BorderButton key={border} to={`/${border}`}>
-                            {countries.getName(border, "en")}
-                        </BorderButton>
-                    ))}
+                    {borderComponents.length === 0
+                        ? "No border countries !"
+                        : borderComponents}
                 </BorderButtons>
             </DetailText>
         </DetailPageStyle>

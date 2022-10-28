@@ -26,10 +26,47 @@ const fetchCountryDetail = async (id) => {
     return res.json();
 };
 
+const transformCountries = (data) =>
+    data.map((item) => {
+        return {
+            id: item.cca3,
+            name: item.name.common,
+            image: item.flags[0] || item.flags.svg,
+            population: item.population
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+            region: item.region,
+            capital: item.capital[0],
+        };
+    });
+
+const transformCountryDetail = (data) => {
+    return {
+        status: data.status,
+        name: data.name.common,
+        nativeName: Object.values(data.name.nativeName),
+        image: data.flags.svg,
+        population: data.population
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ","),
+        region: data.region,
+        subregion: data.subregion,
+        capital: data.capital,
+        tld: data.tld,
+        currencies: Object.values(data.currencies),
+        languages: Object.values(data.languages),
+        borders: data.borders,
+    };
+};
+
 export const useGetCountries = (value) => {
-    return useQuery(["countries", value], () => fetchCountries(value));
+    return useQuery(["countries", value], () => fetchCountries(value), {
+        select: transformCountries,
+    });
 };
 
 export const useGetCountryDetial = (id) => {
-    return useQuery(["countryDetial", id], () => fetchCountryDetail(id));
+    return useQuery(["countryDetial", id], () => fetchCountryDetail(id), {
+        select: transformCountryDetail,
+    });
 };

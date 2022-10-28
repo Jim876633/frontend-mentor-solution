@@ -92,7 +92,7 @@ export const DetailInfo = styled.div`
 export const BorderButtons = styled.div`
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 1rem;
     @media (min-width: 615px) {
         grid-column: 1/3;
     }
