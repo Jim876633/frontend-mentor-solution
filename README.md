@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Fontend mentor solution]()
--   Live Site URL: [Live site]()
+-   Solution URL: [Fontend mentor solution](https://www.frontendmentor.io/solutions/responsive-homepage-width-css-grid-and-scss-6DIILLLM4o)
+-   Live Site URL: [Live site](https://jim-news-homepage.netlify.app/)
 
 ## My process
 
