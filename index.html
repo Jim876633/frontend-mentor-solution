@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | News homepage</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="scss/style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__logo">
+                <img src="/assets/images/logo.svg" alt="logo" />
+            </div>
+            <button
+                title="menu-button"
+                type="button"
+                class="header__menuButton"
+            >
+                <img src="/assets/images/icon-menu.svg" alt="menu-open" />
+            </button>
+            <div class="menu-backdrop"></div>
+            <ul class="header__links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/">New</a></li>
+                <li><a href="/">Popular</a></li>
+                <li><a href="/">Trending</a></li>
+                <li><a href="/">Categories</a></li>
+            </ul>
+            <button title="menu-close-button" type="button" class="closeButton">
+                <img
+                    src="/assets/images/icon-menu-close.svg"
+                    alt="menu-close"
+                />
+            </button>
+        </header>
+        <main class="main">
+            <div class="main__banner">
+                <picture>
+                    <source
+                        media="(min-width:768px)"
+                        srcset="/assets/images/image-web-3-desktop.jpg"
+                    />
+                    <img
+                        src="/assets/images/image-web-3-mobile.jpg"
+                        alt="banner"
+                    />
+                </picture>
+            </div>
+            <h1 class="main__title">The Bright Future of Web 3.0?</h1>
+            <div class="main__info">
+                <p class="main__info--text">
+                    We dive into the next evolution of the web that claims to
+                    put the power of the platforms back into the hands of the
+                    people. But is it really fulfilling its promise?
+                </p>
+                <a href="/" class="main__info--readMore">read more</a>
+            </div>
+            <article class="main__news">
+                <h2 class="main__news--title">New</h2>
+                <div class="new">
+                    <a href="/" class="new--title">Hydrogen VS Electric Cars</a>
+                    <p class="new--info">
+                        Will hydrogen-fueled cars ever catch up to EVs?
+                    </p>
+                </div>
+                <div class="new">
+                    <a href="/" class="new--title"
+                        >The Downsides of AI Artistry</a
+                    >
+                    <p class="new--info">
+                        What are the possible adverse effects of on-demand AI
+                        image generation?
+                    </p>
+                </div>
+                <div class="new">
+                    <a href="/" class="new--title">Is VC Funding Drying Up?</a>
+                    <p class="new--info">
+                        Private funding by VC firms is down 50% YOY. We take a
+                        look at what that means.
+                    </p>
+                </div>
+            </article>
+            <article class="main__reading">
+                <div class="reading-block">
+                    <div class="reading-block--image">
+                        <img
+                            src="/assets/images/image-retro-pcs.jpg"
+                            alt="retro"
+                        />
+                    </div>
+                    <div class="reading-block--intro">
+                        <span class="index">01</span>
+                        <a href="/" class="title">Reviving Retro PCs</a>
+                        <p class="intro">
+                            What happens when old PCs are given modern upgrades?
+                        </p>
+                    </div>
+                </div>
+                <div class="reading-block">
+                    <div class="reading-block--image">
+                        <img
+                            src="/assets/images/image-top-laptops.jpg"
+                            alt="retro"
+                        />
+                    </div>
+                    <div class="reading-block--intro">
+                        <span class="index">02</span>
+                        <a href="/" class="title">Top 10 Laptops of 2022</a>
+                        <p class="intro">
+                            Our best picks for various needs and budgets.
+                        </p>
+                    </div>
+                </div>
+                <div class="reading-block">
+                    <div class="reading-block--image">
+                        <img
+                            src="/assets/images/image-gaming-growth.jpg"
+                            alt="retro"
+                        />
+                    </div>
+                    <div class="reading-block--intro">
+                        <span class="index">03</span>
+                        <a href="/" class="title">The Growth of Gaming</a>
+                        <p class="intro">
+                            How the pandemic has sparked fresh opportunities.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </main>
+        <footer class="footer">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="https://github.com/Jim876633">Jim Huang</a>.
+        </footer>
+        <script src="app.js"></script>
+    </body>
+</html>

@@ -1,0 +1,273 @@
+$color-orange: hsl(35, 77%, 62%);
+$color-red: hsl(5, 85%, 63%);
+$color-white: hsl(36, 100%, 99%);
+$color-gray: hsl(233, 8%, 79%);
+$color-light-blue: hsl(236, 13%, 42%);
+$color-dark-blue: hsl(240, 100%, 5%);
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    font-size: 15px;
+    transition: color 0.2s, background 0.2s;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-dark-blue;
+}
+li {
+    list-style: none;
+}
+button {
+    display: inline-block;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+img {
+    vertical-align: middle;
+}
+
+@mixin respond($media) {
+    @if ($media == ipad) {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    @if ($media == desktop) {
+        @media (min-width: 960px) {
+            @content;
+        }
+    }
+}
+.header {
+    position: fixed;
+    display: flex;
+    height: max(15vh, 6rem);
+    width: min(100%, 1040px);
+    padding: 2rem 1rem;
+    margin: auto;
+    background: $color-white;
+    @include respond(ipad) {
+        position: relative;
+    }
+    &__logo {
+        img {
+            height: 100%;
+        }
+    }
+    &__links {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 70%;
+        background: $color-white;
+        transform: translateX(100%);
+        transition: transform 0.5s;
+        @include respond(ipad) {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            height: auto;
+            width: auto;
+            transform: none;
+        }
+        li:first-child {
+            margin-top: 20vh;
+            @include respond(ipad) {
+                margin-top: 0;
+            }
+        }
+        a {
+            display: block;
+            width: 100%;
+            font-size: 16px;
+            padding: 1rem 2rem;
+            &:hover {
+                color: $color-orange;
+            }
+            @include respond(ipad) {
+                width: auto;
+                padding: 0 1.5rem;
+            }
+        }
+        &.open {
+            transform: translateX(0);
+            z-index: 2;
+        }
+    }
+    .menu-backdrop {
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: $color-dark-blue;
+        opacity: 0.5;
+        z-index: 1;
+    }
+    .closeButton {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        display: none;
+        z-index: 3;
+        transition: transform 0.2s;
+        &:hover {
+            transform: rotate(90deg);
+        }
+    }
+    &__menuButton {
+        position: absolute;
+        top: 2.5rem;
+        right: 1rem;
+        @include respond(ipad) {
+            display: none;
+        }
+    }
+}
+.main {
+    display: grid;
+    gap: 2rem;
+    grid-template-areas:
+        "banner"
+        "title"
+        "info"
+        "news"
+        "reading";
+    padding: 16vh 1rem;
+    margin: auto;
+    width: min(100%, 1040px);
+    @include respond(ipad) {
+        grid-template-areas:
+            "banner banner news"
+            "title info news"
+            "reading reading reading";
+        grid-auto-columns: 1fr;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    &__banner {
+        width: 100%;
+        grid-area: banner;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__title {
+        grid-area: title;
+        line-height: 1;
+        font-size: 3rem;
+        color: $color-dark-blue;
+    }
+    &__info {
+        grid-area: info;
+        &--text {
+            color: $color-light-blue;
+            line-height: 1.5;
+        }
+        &--readMore {
+            padding: 1rem 2rem;
+            margin-block: 1.5rem;
+            color: $color-white;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.2rem;
+            background: $color-red;
+            &:hover {
+                color: $color-white;
+                background: $color-dark-blue;
+            }
+        }
+    }
+    &__news {
+        grid-area: news;
+        padding: 1rem;
+        background: $color-dark-blue;
+        &--title {
+            color: $color-orange;
+            font-size: 2rem;
+        }
+        .new {
+            padding-block: 2rem;
+            & + .new {
+                border-top: 1px solid $color-gray;
+            }
+            &--title {
+                line-height: 3;
+                color: $color-white;
+                font-weight: 600;
+                &:hover {
+                    color: $color-orange;
+                }
+            }
+            &--info {
+                color: $color-gray;
+            }
+        }
+    }
+    &__reading {
+        grid-area: reading;
+        display: grid;
+        padding-top: 2rem;
+        gap: 2rem;
+        @include respond(ipad) {
+            grid-auto-rows: 8rem;
+        }
+        @include respond(desktop) {
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: 1fr;
+        }
+        .reading-block {
+            display: flex;
+            gap: 2rem;
+            &--image {
+                flex: 1 1;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            &--intro {
+                flex: 2 2;
+                display: grid;
+                align-items: stretch;
+                .index {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    color: $color-gray;
+                }
+                .title {
+                    font-weight: 800;
+                    font-size: 1.2rem;
+                    color: $color-dark-blue;
+                    margin-block: 0.5rem;
+                    &:hover {
+                        color: $color-red;
+                    }
+                }
+                .intro {
+                    color: $color-light-blue;
+                }
+            }
+        }
+    }
+}
+.footer {
+    font-size: 1rem;
+    text-align: center;
+    margin: 2rem;
+    a {
+        text-decoration: underline;
+        font-size: 1rem;
+        color: hsl(228, 45%, 44%);
+    }
+}
