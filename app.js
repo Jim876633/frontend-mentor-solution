@@ -8,12 +8,14 @@ const openMenuHandler = () => {
     close_button.style.display = "block";
     menu.classList.add("open");
     backdrop.style.visibility = "visible";
+    document.body.style.overflow = "hidden";
 };
 const closeMenuHandler = () => {
     menu_button.style.display = "block";
     close_button.style.display = "none";
     menu.classList.remove("open");
     backdrop.style.visibility = "hidden";
+    document.body.style.overflow = "auto";
 };
 
 menu_button.addEventListener("click", openMenuHandler);
