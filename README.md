@@ -23,6 +23,7 @@ Switch to the diffent branch and the branch name is the challenge title.
 | Launch countdown timer | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/launch-countdown-timer) | [Demo](https://jim-launch-countdown-timer.netlify.app/) |
 | Textimonials grid section | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/textimonials-grid-section) | [Demo](https://jim-textimonials-grid-section.netlify.app/) |
 | Textimonials grid section | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/rest-countries-api-with-color-theme-switcher) | [Demo](https://jim-rest-countries-api.netlify.app/) |
+| News homepage | [Branch](https://github.com/Jim876633/frontend-mentor-solution/tree/news-homepage) | [Demo](https://jim-news-homepage.netlify.app/) |
 
 
 
