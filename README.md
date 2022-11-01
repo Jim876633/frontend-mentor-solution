@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Fontend mentro solution]()
--   Live Site URL: [Live site]()
+-   Solution URL: [Fontend mentro solution](https://www.frontendmentor.io/solutions/responsive-landing-page-with-scss-BFjSpP5r0p)
+-   Live Site URL: [Live site](https://jim-sunnyside-agency-landing-page.netlify.app/)
 
 ## My process
 
