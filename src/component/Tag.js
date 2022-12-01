@@ -6,7 +6,11 @@ const Tag = ({ tagName, removeTag }) => {
     return (
         <TagStyle>
             <TagName>{tagName}</TagName>
-            <FilterButton onClick={() => removeTag(tagName)}>
+            <FilterButton
+                title="remove tag"
+                type="button"
+                onClick={() => removeTag(tagName)}
+            >
                 &times;
             </FilterButton>
         </TagStyle>

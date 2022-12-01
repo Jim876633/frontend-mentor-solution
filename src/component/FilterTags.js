@@ -11,7 +11,9 @@ const FilterTags = ({ removeTag, clearTag, tagList }) => {
                     <Tag key={tag} tagName={tag} removeTag={removeTag} />
                 ))}
             </Tags>
-            <ClearButton onClick={clearTag}>Clear</ClearButton>
+            <ClearButton title="clear tags" type="button" onClick={clearTag}>
+                Clear
+            </ClearButton>
         </FilterCard>
     );
 };

@@ -10,7 +10,10 @@ const StyleButton = styled.button`
 
 export const FilterButton = styled(StyleButton)`
     font-size: 3rem;
-    padding: 0 0.8rem;
+    height: 100%;
+    width: 3.5rem;
+    line-height: 3.5rem;
+    padding: 0;
     &:hover {
         background: var(--dark);
     }
