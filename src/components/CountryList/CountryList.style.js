@@ -1,11 +1,11 @@
-import styled, { css } from "styled-components";
 import { MdArrowBackIosNew, MdArrowForwardIos } from "react-icons/md";
+import styled, { css } from "styled-components";
 
 const CountryListStyle = styled.article`
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 3vw;
+    gap: max(3vw, 3rem);
     padding: 2rem;
 `;
 

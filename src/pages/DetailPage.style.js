@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import { BsArrowLeft } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const DetailPageStyle = styled.main`
     position: relative;
@@ -14,7 +14,8 @@ const DetailPageStyle = styled.main`
         flex-direction: row;
         align-items: center;
         gap: 5rem;
-        height: 90vh;
+        height: max(calc(100vh - 8rem), 55rem);
+        padding: 10rem 10vw;
     }
 `;
 
@@ -38,14 +39,18 @@ export const ArrowLeft = styled(BsArrowLeft)``;
 
 export const DetailImage = styled.div`
     width: 100%;
+    height: min(100%, 50rem);
     vertical-align: middle;
     img {
         width: 100%;
+        height: 100%;
+        object-fit: contain;
     }
 `;
 
 export const DetailText = styled.div`
     width: 100%;
+    height: min(100%, 50rem);
     h2 {
         margin: 1rem 0;
         font-size: 3rem;
@@ -61,6 +66,7 @@ export const DetailText = styled.div`
         display: grid;
         gap: 1.5rem;
         grid-template-columns: repeat(2, 1fr);
+        align-items: center;
         h2 {
             grid-column: 1/3;
         }
