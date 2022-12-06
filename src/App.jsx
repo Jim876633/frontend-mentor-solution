@@ -5,8 +5,16 @@ import Header from "./components/Header/Header";
 import DetailPage from "./pages/DetailPage";
 import HomePage from "./pages/HomePage";
 
+let themeScheme;
+if (
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches
+) {
+    themeScheme = "dark";
+}
+
 function App() {
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(themeScheme === "dark");
     const toggleModeHandler = () => {
         setDarkMode((prev) => !prev);
     };
