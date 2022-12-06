@@ -1,5 +1,5 @@
-import FilterStyle, { FilterSelect, FilterOption } from "./Filter.style";
-import { useDataContext } from "../context/DataContextProvider";
+import { useDataContext } from "../../context/DataContextProvider";
+import FilterStyle, { FilterOption, FilterSelect } from "./Filter.style";
 
 const Filter = () => {
     const { searchHandler } = useDataContext();

@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
-import Country from "./Country";
-import LoadingPage from "../pages/LoadingPage";
+import { useEffect, useState } from "react";
+import { useGetCountries } from "../../api/fetchData";
+import { useDataContext } from "../../context/DataContextProvider";
+import LoadingPage from "../../pages/LoadingPage";
+import Country from "../Country/Country";
 import CountryListStyle, {
     EmptyPageStyle,
-    PageButtons,
-    PageButton,
-    PrevButton,
     NextButton,
-    PrevIcon,
     NextIcon,
+    PageButton,
+    PageButtons,
+    PrevButton,
+    PrevIcon,
 } from "./CountryList.style";
-import { useGetCountries } from "./api/fetchData";
-import { useDataContext } from "./context/DataContextProvider";
 
 const MOST_PAGE_COUNT = 5;
 const MOST_COUNTRIES_IN_PAGE = 8;

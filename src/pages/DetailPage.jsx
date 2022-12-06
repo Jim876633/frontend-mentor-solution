@@ -1,19 +1,19 @@
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import LoadingPage from "./LoadingPage";
-import ErrorPage from "./ErrorPage";
 import DetailPageStyle, {
-    BackButton,
     ArrowLeft,
-    DetailImage,
-    DetailText,
-    DetailInfo,
-    BorderButtons,
+    BackButton,
     BorderButton,
+    BorderButtons,
+    DetailImage,
+    DetailInfo,
+    DetailText,
 } from "./DetailPage.style";
+import ErrorPage from "./ErrorPage";
+import LoadingPage from "./LoadingPage";
 
-import { useGetCountryDetial } from "../components/api/fetchData";
-import { useDataContext } from "../components/context/DataContextProvider";
+import { useGetCountryDetial } from "../api/fetchData";
+import { useDataContext } from "../context/DataContextProvider";
 
 const countries = require("i18n-iso-countries");
 countries.registerLocale(require("i18n-iso-countries/langs/en.json"));

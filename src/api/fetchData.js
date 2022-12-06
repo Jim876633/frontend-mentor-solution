@@ -1,8 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
 
-// const nameURL = (name) =>
-//     `https://restcountries.com/v3/name/${name}?fields=name,capital,region,population,flags,cca3`;
-
 const allURL = `https://restcountries.com/v3.1/all?fields=name,capital,region,population,flags,cca3`;
 const regionURL = (region) =>
     `https://restcountries.com/v3/region/${region}?fields=name,capital,region,population,flags,cca3`;

@@ -1,7 +1,7 @@
 import React from "react";
-import Search from "../components/Form/Search";
+import CountryList from "../components/CountryList/CountryList";
 import Filter from "../components/Form/Filter";
-import CountryList from "../components/CountryList";
+import Search from "../components/Form/Search";
 
 import HomePageStyle, { FormStyle } from "./HomePage.style";
 

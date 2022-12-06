@@ -1,4 +1,4 @@
-import { useDataContext } from "../context/DataContextProvider";
+import { useDataContext } from "../../context/DataContextProvider";
 import SearchStyle, { SearchIcon, SearchInput } from "./Search.style";
 
 const Search = () => {
