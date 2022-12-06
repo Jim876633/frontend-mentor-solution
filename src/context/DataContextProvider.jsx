@@ -1,4 +1,4 @@
-import React, { useState, useContext, useCallback } from "react";
+import React, { useCallback, useContext, useState } from "react";
 
 const DataContext = React.createContext();
 
@@ -18,8 +18,8 @@ const DataContextProvider = ({ children }) => {
     return (
         <DataContext.Provider
             value={{
-                searchHandler,
                 query,
+                searchHandler,
             }}
         >
             {children}

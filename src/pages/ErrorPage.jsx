@@ -1,13 +1,9 @@
-import ErrorPageStyle from "./ErrorPage.style";
-import { BackButton, ArrowLeft } from "./ErrorPage.style";
+import ErrorPageStyle, { ArrowLeft, BackButton } from "./ErrorPage.style";
 
-const ErrorPage = () => {
+const ErrorPage = ({ message }) => {
     return (
         <ErrorPageStyle>
-            <h2>
-                Can't find the page.
-                <br /> Please search the correct site.
-            </h2>
+            <h2>{message ? message.join("\n") : "Error"}</h2>
             <BackButton to="/">
                 <ArrowLeft />
                 Back

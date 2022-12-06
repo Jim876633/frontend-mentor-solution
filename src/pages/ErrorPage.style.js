@@ -11,6 +11,7 @@ const ErrorPageStyle = styled.main`
     h2 {
         font-size: min(5vw, 3rem);
         text-align: center;
+        white-space: pre-line;
     }
 `;
 export const BackButton = styled(Link)`

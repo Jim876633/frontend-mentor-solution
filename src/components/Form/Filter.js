@@ -2,7 +2,7 @@ import { useDataContext } from "../../context/DataContextProvider";
 import FilterStyle, { FilterOption, FilterSelect } from "./Filter.style";
 
 const Filter = () => {
-    const { searchHandler } = useDataContext();
+    const { query, searchHandler } = useDataContext();
 
     const regions = ["africa", "americas", "asia", "europe", "oceania"];
 
@@ -16,6 +16,7 @@ const Filter = () => {
                 onChange={selectHandler}
                 name="filter-select"
                 title="filter-select"
+                defaultValue={query.region}
             >
                 <FilterOption value="all">--filter by region--</FilterOption>
                 {regions.map((region) => (

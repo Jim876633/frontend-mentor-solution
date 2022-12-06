@@ -33,7 +33,14 @@ const DetailPage = () => {
         return <LoadingPage height={"90vh"} />;
     }
     if (isError || data.status !== "officially-assigned") {
-        return <ErrorPage />;
+        return (
+            <ErrorPage
+                message={[
+                    "Can't find the page.",
+                    "Please search the correct site.",
+                ]}
+            />
+        );
     }
     const {
         name,
