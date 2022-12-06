@@ -14,6 +14,8 @@ $color-white: hsl(33, 100%, 98%);
     font-family: "DM Sans", sans-serif;
 }
 body {
+    position: relative;
+    height: max(100vh, 600px);
     background: $color-cream;
 }
 .container {

@@ -7,6 +7,8 @@
 }
 
 body {
+  position: relative;
+  height: max(100vh, 600px);
   background: hsl(27deg, 66%, 92%);
 }
 

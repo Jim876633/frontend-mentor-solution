@@ -99,5 +99,5 @@ const drawChart = (priceData) => {
         },
     };
 
-    const myChart = new Chart(document.getElementById("chart"), config);
+    new Chart(document.getElementById("chart"), config);
 };
