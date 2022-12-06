@@ -1,13 +1,13 @@
-import { memo, useState, useEffect } from "react";
+import { memo, useEffect, useState } from "react";
 import {
     Container,
-    Main,
-    Title,
-    Time,
-    Footer,
     FacebookIcon,
-    PinterestIcon,
+    Footer,
     InstagramIcon,
+    Main,
+    PinterestIcon,
+    Time,
+    Title,
 } from "./App.style";
 import FlipCard from "./component/FlipCard";
 const FlipCardMemo = memo(FlipCard);
@@ -70,6 +70,25 @@ function App() {
                 <PinterestIcon />
                 <InstagramIcon />
             </Footer>
+            <div class="attribution">
+                Challenge by
+                <a
+                    href="https://www.frontendmentor.io?ref=challenge"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                >
+                    Frontend Mentor
+                </a>
+                . Coded by{" "}
+                <a
+                    href="https://github.com/Jim876633"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                >
+                    Jim Huang
+                </a>
+                .
+            </div>
         </Container>
     );
 }

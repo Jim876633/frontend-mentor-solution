@@ -1,19 +1,20 @@
 import styled from "styled-components";
 import { ReactComponent as Facebook } from "./icons/icon-facebook.svg";
-import { ReactComponent as Pinterest } from "./icons/icon-pinterest.svg";
 import { ReactComponent as Instagram } from "./icons/icon-instagram.svg";
+import { ReactComponent as Pinterest } from "./icons/icon-pinterest.svg";
 
 export const Container = styled.div`
+    position: relative;
     background-image: url("/images/bg-stars.svg"),
         linear-gradient(to bottom, var(--dark-blue-3), var(--dark-blue-2));
-    height: 100vh;
+    height: max(100vh, 55rem);
 `;
 
 export const Main = styled.main`
     display: grid;
     place-content: center;
     width: 90%;
-    height: 80vh;
+    height: 75%;
     margin: auto;
 `;
 
@@ -38,7 +39,7 @@ export const Footer = styled.footer`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 80% 0;
-    height: 20vh;
+    height: 25%;
     width: 100%;
 `;
 

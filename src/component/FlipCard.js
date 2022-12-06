@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef } from "react";
-import { Card, FlipTop, FlipBottom, Number } from "./FlipCard.style";
+import { useEffect, useRef, useState } from "react";
+import { Card, FlipBottom, FlipTop, Number } from "./FlipCard.style";
 
 const FlipCard = ({ time, title }) => {
     const [mounted, setMounted] = useState(true);
@@ -17,7 +17,7 @@ const FlipCard = ({ time, title }) => {
         return () => {
             clearTimeout(timeID);
         };
-    }, [time]);
+    }, [time, cur]);
 
     return (
         <Card>
