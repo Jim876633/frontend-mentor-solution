@@ -45,7 +45,7 @@ export const ExploreButton = styled(Link)`
     }
 `;
 
-export const ExploreHeading = styled.h4`
+export const ExploreHeading = styled.span`
     color: var(--clr-primary);
     text-transform: uppercase;
     font-size: 2rem;
