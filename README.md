@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
--   Solution URL: [Fontend mentor solution]()
--   Live Site URL: [Live site]()
+-   Solution URL: [Fontend mentor solution](https://www.frontendmentor.io/solutions/space-tourism-multipage-website-Zc439QZ95s)
+-   Live Site URL: [Live site](https://jim-space-tourism-website.netlify.app/)
 
 ## My process
 
