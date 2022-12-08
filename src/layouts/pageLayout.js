@@ -6,6 +6,7 @@ export const PageBackground = styled.main`
     min-height: 100vh;
     height: 100%;
     background-image: ${(props) => `url(${props.urlList.mobile})`};
+    background-color: var(--clr-primary);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
