@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { MEDIA_DESKTOP, MEDIA_TABLET } from "../constants/media";
 
-export const PageBackground = styled.div`
+export const PageBackground = styled.main`
     width: 100%;
     min-height: 100vh;
     height: 100%;

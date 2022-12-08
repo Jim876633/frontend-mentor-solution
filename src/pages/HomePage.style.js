@@ -48,5 +48,6 @@ export const ExploreHeading = styled.h4`
     color: var(--clr-primary);
     text-transform: uppercase;
     font-size: 2rem;
+    font-family: var(--ff-belle);
     letter-spacing: 1.25px;
 `;
