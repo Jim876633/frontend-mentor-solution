@@ -4,6 +4,7 @@ import { MEDIA_DESKTOP, MEDIA_TABLET } from "../constants/media";
 export const TechnologyPageContainer = styled.div`
     padding-block: 10rem 10rem;
     text-align: center;
+    height: 100%;
     ${MEDIA_TABLET} {
         padding-block: 15rem 5rem;
         text-align: left;
@@ -23,7 +24,9 @@ export const Section = styled.div`
         grid-template-columns: min-content 1fr;
         gap: 8rem;
         width: max(calc(60% - 5vw), calc(100% - 40rem - 5vw));
+        height: 100%;
         margin-inline: 5vw auto;
+        margin-block: auto;
         & > h5:first-child {
             margin-left: 0;
             grid-column: span 2;

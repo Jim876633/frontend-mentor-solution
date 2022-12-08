@@ -4,6 +4,7 @@ import { MEDIA_DESKTOP, MEDIA_TABLET } from "../constants/media";
 export const DestinationContainer = styled.div`
     padding-block: 10rem 5rem;
     text-align: center;
+    height: 100%;
     ${MEDIA_TABLET} {
         padding-block: 15rem 5rem;
     }
@@ -49,7 +50,7 @@ export const Section2 = styled.div`
         width: min(45%, 40rem);
         height: 45rem;
         text-align: left;
-        margin: 0 0 auto;
+        margin: auto 0;
     }
 `;
 

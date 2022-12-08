@@ -15,6 +15,7 @@ export const PageBackground = styled.main`
         background-image: ${(props) => `url(${props.urlList.tablet})`};
     }
     ${MEDIA_DESKTOP} {
+        height: max(100vh, 60rem);
         background-image: ${(props) => `url(${props.urlList.desktop})`};
     }
     transition: all 1s;

@@ -9,6 +9,7 @@ export const HomePageContainer = styled.div`
     gap: 8.1rem;
     padding-block: 15rem 5rem;
     align-items: center;
+    height: 100%;
     ${MEDIA_DESKTOP} {
         flex-direction: row;
         justify-content: space-evenly;
