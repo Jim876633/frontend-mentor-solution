@@ -1,5 +1,5 @@
-import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
+import styled from "styled-components";
 import { MEDIA_DESKTOP, MEDIA_TABLET } from "../../constants/media";
 
 export const NavbarContainer = styled.nav`
@@ -12,6 +12,7 @@ export const NavbarContainer = styled.nav`
     right: 0;
     height: var(--nav-h);
     padding-inline: 2.4rem 0;
+    z-index: 10;
     ${MEDIA_DESKTOP} {
         padding-top: 3rem;
     }
@@ -72,7 +73,16 @@ export const NavLinks = styled.ul`
 `;
 
 export const NavLinksItem = styled.li`
+    position: relative;
     height: 100%;
+    span.underline {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--clr-white);
+    }
 `;
 
 export const ItemLink = styled(NavLink)`
@@ -82,13 +92,10 @@ export const ItemLink = styled(NavLink)`
     text-transform: uppercase;
     padding-block: 0.5rem;
     height: 100%;
-    border-bottom: 2px solid transparent;
     transition: all 0.2s;
+    border-bottom: 2px solid transparent;
     &:hover {
         border-bottom: 2px solid var(--clr-white-50);
-    }
-    &.active {
-        border-bottom: 2px solid var(--clr-white);
     }
     ${MEDIA_TABLET} {
         display: flex;

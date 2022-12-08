@@ -1,16 +1,24 @@
+import { motion } from "framer-motion";
 import React from "react";
+import { routerVariants } from "../animation";
 import {
-    HomePageContainer,
-    TextContainer,
-    TitleSmallHeading,
-    TitleHeading,
     ExploreButton,
     ExploreHeading,
+    HomePageContainer,
+    TextContainer,
+    TitleHeading,
+    TitleSmallHeading,
 } from "./HomePage.style";
 
 const HomePage = () => {
     return (
-        <HomePageContainer>
+        <HomePageContainer
+            as={motion.div}
+            variants={routerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
             <TextContainer>
                 <TitleSmallHeading>So, you want to travel to</TitleSmallHeading>
                 <TitleHeading>Space</TitleHeading>

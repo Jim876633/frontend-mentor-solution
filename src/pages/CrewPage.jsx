@@ -1,12 +1,18 @@
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
+import {
+    crewImageVariants,
+    routerVariants,
+    sliderVariants,
+} from "../animation";
 import PageTitle from "../component/PageTitle/PageTitle";
 import { usePageData } from "../hooks/usePageData";
 import {
     ButtonList,
     CategoryButton,
     CrewPageContainer,
-    Section,
     ImageWrap,
+    Section,
     TextWrap,
 } from "./CrewPage.style.";
 
@@ -30,21 +36,44 @@ const CrewPage = ({ data }) => {
     ));
 
     return (
-        <CrewPageContainer>
+        <CrewPageContainer
+            as={motion.div}
+            variants={routerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+        >
             <Section>
                 <PageTitle index="02" title="meet your crew" />
-                <ImageWrap>
-                    <picture>
-                        <source srcSet={images.webp} type="image/webp" />
-                        <img src={images.png} alt={name} />
-                    </picture>
-                </ImageWrap>
+                <AnimatePresence mode="wait">
+                    <ImageWrap
+                        key={`image-${activeCategory}`}
+                        as={motion.div}
+                        variants={crewImageVariants}
+                        initial="hidden"
+                        animate="visible"
+                    >
+                        <picture>
+                            <source srcSet={images.webp} type="image/webp" />
+                            <img src={images.png} alt={name} />
+                        </picture>
+                    </ImageWrap>
+                </AnimatePresence>
                 <ButtonList>{buttonElements}</ButtonList>
-                <TextWrap>
-                    <h4>{role}</h4>
-                    <h3>{name}</h3>
-                    <p>{bio}</p>
-                </TextWrap>
+                <AnimatePresence mode="wait">
+                    <TextWrap
+                        key={`slider-${activeCategory}`}
+                        as={motion.div}
+                        variants={sliderVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
+                    >
+                        <h4>{role}</h4>
+                        <h3>{name}</h3>
+                        <p>{bio}</p>
+                    </TextWrap>
+                </AnimatePresence>
             </Section>
         </CrewPageContainer>
     );

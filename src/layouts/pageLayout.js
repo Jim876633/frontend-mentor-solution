@@ -9,10 +9,12 @@ export const PageBackground = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
     ${MEDIA_TABLET} {
         background-image: ${(props) => `url(${props.urlList.tablet})`};
     }
     ${MEDIA_DESKTOP} {
         background-image: ${(props) => `url(${props.urlList.desktop})`};
     }
+    transition: all 1s;
 `;

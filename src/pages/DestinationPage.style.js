@@ -1,10 +1,9 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { MEDIA_DESKTOP, MEDIA_TABLET } from "../constants/media";
 
 export const DestinationContainer = styled.div`
     padding-block: 10rem 5rem;
     text-align: center;
-
     ${MEDIA_TABLET} {
         padding-block: 15rem 5rem;
     }
@@ -30,6 +29,7 @@ export const Section1 = styled.div`
     }
     ${MEDIA_DESKTOP} {
         width: min(45%, 60rem);
+        height: 45rem;
         margin: auto 0;
         picture {
             width: 70%;
@@ -47,6 +47,7 @@ export const Section2 = styled.div`
 
     ${MEDIA_DESKTOP} {
         width: min(45%, 40rem);
+        height: 45rem;
         text-align: left;
         margin: 0 0 auto;
     }
@@ -93,6 +94,17 @@ export const SectionLinks = styled.ul`
     ${MEDIA_DESKTOP} {
         justify-content: flex-start;
     }
+    li {
+        position: relative;
+    }
+    span.underline {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--clr-white);
+    }
 `;
 
 export const CategoryButton = styled.button`
@@ -104,11 +116,4 @@ export const CategoryButton = styled.button`
     &:hover {
         border-bottom: 2px solid var(--clr-white-50);
     }
-    ${(porps) =>
-        porps.active === "active"
-            ? css`
-                  color: var(--clr-white);
-                  border-bottom: 2px solid var(--clr-white);
-              `
-            : ""}
 `;

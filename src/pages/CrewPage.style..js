@@ -18,6 +18,7 @@ export const Section = styled.div`
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
     ${MEDIA_TABLET} {
         padding-inline: 4rem;
         gap: 4rem;
