@@ -75,13 +75,15 @@ export const NavLinks = styled.ul`
 export const NavLinksItem = styled.li`
     position: relative;
     height: 100%;
-    span.underline {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: var(--clr-white);
+    ${MEDIA_TABLET} {
+        span.underline {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--clr-white);
+        }
     }
 `;
 
@@ -97,9 +99,15 @@ export const ItemLink = styled(NavLink)`
     &:hover {
         border-bottom: 2px solid var(--clr-white-50);
     }
+    &.active {
+        border-bottom: 2px solid var(--clr-white);
+    }
     ${MEDIA_TABLET} {
         display: flex;
         align-items: center;
+        &.active {
+            border-bottom: 2px solid transparent;
+        }
     }
 `;
 
