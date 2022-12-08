@@ -32,7 +32,7 @@ const DestinationPage = ({ data }) => {
                 {category}
             </CategoryButton>
             {activeCategory === category ? (
-                <motion.span class="underline" layoutId="dest-underline" />
+                <motion.span className="underline" layoutId="dest-underline" />
             ) : (
                 ""
             )}
