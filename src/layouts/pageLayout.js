@@ -4,7 +4,6 @@ import { MEDIA_DESKTOP, MEDIA_TABLET } from "../constants/media";
 export const PageBackground = styled.main`
     width: 100%;
     min-height: 100vh;
-    height: 100%;
     background-image: ${(props) => `url(${props.urlList.mobile})`};
     background-color: var(--clr-primary);
     background-repeat: no-repeat;
