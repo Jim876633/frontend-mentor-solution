@@ -54,7 +54,7 @@ Users should be able to:
 -   Mobile-first workflow
 -   [React](https://reactjs.org/) - JS library
 -   [React Router](https://reactrouter.com/en/main) - React library
--   [React Query](https://react-query-v3.tanstack.com/) - React library
+-   [TanStack Query](https://tanstack.com/query/v4/) - for manage AJAX state
 -   [Styled Components](https://styled-components.com/) - For styles
 -   [Rest Countries API](https://restcountries.com/) - API
 
