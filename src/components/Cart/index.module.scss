@@ -1,4 +1,5 @@
 @import "@style/scss/variables";
+@import "@style/scss/mixin";
 
 .cart {
     position: fixed;
@@ -16,9 +17,15 @@
     height: fit-content;
     border-radius: 1rem;
     padding: 2rem;
-    transform: translateY(-150%);
+    transform: translateY(-200%);
     transition: transform 0.5s;
+    box-shadow: 1px 5px 10px 2px $clr-blue-3;
     z-index: 1;
+    @include respond(desktop) {
+        left: auto;
+        right: calc(10% + 2rem);
+        margin: 0;
+    }
     &.open {
         transform: translateY(0);
     }

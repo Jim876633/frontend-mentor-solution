@@ -1,10 +1,17 @@
 import data from "@/assets/data";
 import deleteIcon from "@/assets/images/icon-delete.svg";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteProduct } from "../../redux/productListSlice";
 import classes from "./index.module.scss";
 
 const Cart = ({ open }) => {
     const productList = useSelector((state) => state.productList);
+
+    const dispatch = useDispatch();
+
+    const deleteHandler = (index) => {
+        dispatch(deleteProduct(index));
+    };
 
     return (
         <div className={`${classes.cart} ${open ? classes.open : ""}`}>
@@ -14,7 +21,7 @@ const Cart = ({ open }) => {
             {productList.length === 0 ? (
                 <p className={classes.emptyText}>Your cart is empty</p>
             ) : (
-                productList.map((item) => {
+                productList.map((item, i) => {
                     const { id, title, price, imageThumbnailList } =
                         data[item.id];
                     const totalPrice = +price * item.amount;
@@ -32,6 +39,9 @@ const Cart = ({ open }) => {
                                 title="Delete product"
                                 type="button"
                                 className={classes.deleteButton}
+                                onClick={() => {
+                                    deleteHandler(i);
+                                }}
                             >
                                 <img src={deleteIcon} alt="delete" />
                             </button>

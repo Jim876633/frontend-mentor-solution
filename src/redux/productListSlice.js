@@ -34,9 +34,13 @@ export const productListSlice = createSlice({
             }
             target.amount += action.payload.amount;
         },
+        deleteProduct: (state, action) => {
+            state.splice(action.payload, 1);
+        },
     },
 });
 
-export const { increment, decrement, addProduct } = productListSlice.actions;
+export const { increment, decrement, addProduct, deleteProduct } =
+    productListSlice.actions;
 
 export default productListSlice.reducer;

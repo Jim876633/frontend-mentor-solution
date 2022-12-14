@@ -3,6 +3,8 @@ import minus from "@/assets/images/icon-minus.svg";
 import arrowRight from "@/assets/images/icon-next.svg";
 import plus from "@/assets/images/icon-plus.svg";
 import arrowLeft from "@/assets/images/icon-previous.svg";
+import { desktop } from "@/assets/style/mediaQuery";
+import { useMediaQuery } from "@chakra-ui/react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../../redux/productListSlice";
@@ -23,12 +25,14 @@ const Home = () => {
 
     const dispatch = useDispatch();
 
-    const [amount, setAmount] = useState(0);
+    const [amount, setAmount] = useState(1);
 
     const [imageIndex, setImageIndex] = useState(0);
 
+    const [isDesktop] = useMediaQuery(desktop);
+
     const minusHandler = () => {
-        if (amount === 0) return;
+        if (amount === 1) return;
         setAmount((prev) => prev - 1);
     };
 
@@ -39,10 +43,10 @@ const Home = () => {
 
     const addItemHandler = () => {
         dispatch(addProduct({ id, amount }));
-        setAmount(0);
+        setAmount(1);
     };
 
-    const imageHandler = (type) => {
+    const imageHandler = (type, i) => {
         if (type === "right") {
             if (imageIndex === imageList.length - 1) {
                 setImageIndex(0);
@@ -57,32 +61,64 @@ const Home = () => {
                 setImageIndex((prev) => prev - 1);
             }
         }
+        if (type === "index") {
+            setImageIndex(i);
+        }
     };
 
     return (
         <main className={classes.main}>
             <div className={classes.imageBlock}>
-                <img src={imageList[imageIndex]} alt={title} />
-                <button
-                    title="previous"
-                    type="button"
-                    className={classes.prevButton}
-                    onClick={() => {
-                        imageHandler("left");
-                    }}
-                >
-                    <img src={arrowLeft} alt="left arrow" />
-                </button>
-                <button
-                    title="next"
-                    type="button"
-                    className={classes.nextButton}
-                    onClick={() => {
-                        imageHandler("right");
-                    }}
-                >
-                    <img src={arrowRight} alt="right arrow" />
-                </button>
+                <div className={classes.largeImage}>
+                    <img src={imageList[imageIndex]} alt={title} />
+                    {!isDesktop ? (
+                        <>
+                            <button
+                                title="previous"
+                                type="button"
+                                className={classes.prevButton}
+                                onClick={() => {
+                                    imageHandler("left");
+                                }}
+                            >
+                                <img src={arrowLeft} alt="left arrow" />
+                            </button>
+                            <button
+                                title="next"
+                                type="button"
+                                className={classes.nextButton}
+                                onClick={() => {
+                                    imageHandler("right");
+                                }}
+                            >
+                                <img src={arrowRight} alt="right arrow" />
+                            </button>
+                        </>
+                    ) : (
+                        ""
+                    )}
+                </div>
+                {isDesktop ? (
+                    <div className={classes.imageList}>
+                        {imageThumbnailList.map((img, i) => (
+                            <button
+                                key={i}
+                                type="button"
+                                title={`image${i + 1}`}
+                                className={
+                                    i === imageIndex ? classes.active : ""
+                                }
+                                onClick={() => {
+                                    imageHandler("index", i);
+                                }}
+                            >
+                                <img src={img} alt={`image${i + 1}`} />
+                            </button>
+                        ))}
+                    </div>
+                ) : (
+                    ""
+                )}
             </div>
             <div className={classes.contentBlock}>
                 <span className={classes.brand}>{brand}</span>
@@ -95,7 +131,7 @@ const Home = () => {
                         ${original_price}
                     </span>
                 </div>
-                <div>
+                <div className={classes.controlWrap}>
                     <div className={classes.amountBlock}>
                         <button
                             title="Minus amount"
