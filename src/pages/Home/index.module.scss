@@ -1,0 +1,92 @@
+@import "@style/scss/variables";
+
+.main {
+    padding-top: $nav_h;
+    .imageBlock {
+        position: relative;
+        width: 100%;
+        height: 40rem;
+        overflow: hidden;
+        img {
+            object-fit: cover;
+            object-position: center;
+        }
+        .prevButton,
+        .nextButton {
+            position: absolute;
+            top: 50%;
+            display: grid;
+            place-content: center;
+            background-color: $clr-white;
+            border-radius: 50%;
+            width: 5rem;
+            height: 5rem;
+            transform: translateY(-50%);
+        }
+        .prevButton {
+            left: 2rem;
+        }
+        .nextButton {
+            right: 2rem;
+        }
+    }
+    .contentBlock {
+        padding: 2rem;
+        .brand {
+            color: $clr-primary;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
+        .title {
+            color: $clr-black;
+            font-size: 3rem;
+        }
+        .description {
+            color: $clr-blue-2;
+            line-height: 1.8;
+        }
+        .priceBlock {
+            display: flex;
+            align-items: center;
+            .price {
+                color: $clr-black;
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+            .discount {
+                color: $clr-primary;
+                background-color: $clr-primary-light;
+                font-weight: 700;
+                padding: 0.5rem;
+                margin-inline: 2rem auto;
+            }
+            .original_price {
+                color: $clr-blue-3;
+                text-decoration: line-through;
+            }
+        }
+        .amountBlock {
+            display: flex;
+            align-items: center;
+            background-color: $clr-blue-4;
+            width: 100%;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            .amount {
+                font-weight: 700;
+                color: $clr-black;
+                margin: auto;
+            }
+        }
+        .addButton {
+            width: 100%;
+            padding-block: 2rem;
+            border-radius: 0.5rem;
+            color: $clr-primary-light;
+            font-weight: 700;
+            background-color: $clr-primary;
+            margin-top: 2rem;
+        }
+    }
+}

@@ -1,0 +1,92 @@
+@import "@style/scss/variables";
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $nav_h;
+    width: 100%;
+    padding-inline: 2rem;
+    background-color: $clr-white;
+    z-index: 5;
+    & > * {
+        flex-shrink: 0;
+    }
+    .toggleButton {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        margin-right: 2rem;
+        z-index: 10;
+    }
+    .logo {
+        height: 3rem;
+    }
+    .backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $clr-black-50;
+        width: 100vw;
+        height: 100vh;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 5;
+        transition: all 0.5s;
+        &.open {
+            visibility: visible;
+            opacity: 1;
+        }
+        &.open ~ .linkList {
+            transform: translateX(0);
+        }
+    }
+    .linkList {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 20rem;
+        height: 100vh;
+        padding-inline: 2rem;
+        padding-block: 10rem;
+        background-color: $clr-white;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+        z-index: 5;
+        li {
+            a {
+                color: $clr-black;
+                font-weight: 700;
+            }
+        }
+    }
+    .cart {
+        position: relative;
+        width: 3rem;
+        height: 3rem;
+        margin-inline: auto 2rem;
+        &:after {
+            content: attr(data-amount);
+            position: absolute;
+            display: grid;
+            place-content: center;
+            right: -0.5rem;
+            top: -0.5rem;
+            width: 2rem;
+            height: 1.8rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: 10rem;
+            color: $clr-primary-light;
+            background: $clr-primary;
+        }
+    }
+    .avatar {
+        width: 3rem;
+        height: 3rem;
+    }
+}

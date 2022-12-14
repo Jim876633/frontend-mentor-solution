@@ -1,0 +1,34 @@
+@import "scss/variables";
+
+* {
+    font-family: "Kumbh Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+}
+ul {
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+button {
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+img {
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
