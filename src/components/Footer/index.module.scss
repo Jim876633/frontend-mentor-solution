@@ -1,0 +1,19 @@
+@import "@style/scss/variables";
+@import "@style/scss/mixin";
+.footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: $footer_h;
+    background-color: $clr-primary;
+    margin: 0;
+    a {
+        margin-inline: 1rem 0;
+        color: $clr-primary-light;
+    }
+    @include respond(desktop) {
+        position: absolute;
+        bottom: 0;
+    }
+}
