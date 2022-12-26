@@ -5,8 +5,10 @@ import plus from "@/assets/images/icon-plus.svg";
 import arrowLeft from "@/assets/images/icon-previous.svg";
 import { desktop } from "@/assets/style/mediaQuery";
 import { useMediaQuery } from "@chakra-ui/react";
-import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
+import { slideVariants } from "../../assets/animate";
 import { addProduct } from "../../redux/productListSlice";
 import classes from "./index.module.scss";
 
@@ -31,6 +33,10 @@ const Home = () => {
 
     const [isDesktop] = useMediaQuery(desktop);
 
+    const imageRef = useRef();
+
+    const slidePositionRef = useRef();
+
     const minusHandler = () => {
         if (amount === 1) return;
         setAmount((prev) => prev - 1);
@@ -53,6 +59,7 @@ const Home = () => {
             } else {
                 setImageIndex((prev) => prev + 1);
             }
+            slidePositionRef.current = 1;
         }
         if (type === "left") {
             if (imageIndex === 0) {
@@ -60,6 +67,7 @@ const Home = () => {
             } else {
                 setImageIndex((prev) => prev - 1);
             }
+            slidePositionRef.current = -1;
         }
         if (type === "index") {
             setImageIndex(i);
@@ -69,8 +77,34 @@ const Home = () => {
     return (
         <main className={classes.main}>
             <div className={classes.imageBlock}>
-                <div className={classes.largeImage}>
-                    <img src={imageList[imageIndex]} alt={title} />
+                <div className={classes.largeImage} ref={imageRef}>
+                    <AnimatePresence
+                        initial={false}
+                        custom={slidePositionRef.current}
+                    >
+                        <motion.img
+                            key={"slide" + imageIndex}
+                            src={imageList[imageIndex]}
+                            alt={title}
+                            variants={slideVariants}
+                            initial="initial"
+                            animate="animate"
+                            exit="exit"
+                            custom={slidePositionRef.current}
+                            drag="x"
+                            dragElastic={0.5}
+                            dragConstraints={imageRef}
+                            onDragEnd={(e, { offset, velocity }) => {
+                                const imageWidth = imageRef.current.offsetWidth;
+                                if (offset.x > imageWidth / 2) {
+                                    imageHandler("left");
+                                }
+                                if (offset.x < -imageWidth / 2) {
+                                    imageHandler("right");
+                                }
+                            }}
+                        />
+                    </AnimatePresence>
                     {!isDesktop ? (
                         <>
                             <button
@@ -112,7 +146,11 @@ const Home = () => {
                                     imageHandler("index", i);
                                 }}
                             >
-                                <img src={img} alt={`image${i + 1}`} />
+                                <img
+                                    src={img}
+                                    alt={`image${i + 1}`}
+                                    draggable="false"
+                                />
                             </button>
                         ))}
                     </div>

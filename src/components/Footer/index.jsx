@@ -3,7 +3,7 @@ import classes from "./index.module.scss";
 const Footer = () => {
     return (
         <footer>
-            <p class={classes.footer}>
+            <p className={classes.footer}>
                 Challenge by
                 <a
                     href="https://www.frontendmentor.io?ref=challenge"
